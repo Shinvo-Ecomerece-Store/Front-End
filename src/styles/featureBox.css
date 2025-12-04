@@ -1,0 +1,16 @@
+
+@utility feature-box {
+  @apply p-6 rounded-xl bg-[color:var(--color-light-gray)] shadow-soft flex flex-col gap-3;
+}
+
+@utility feature-icon {
+  @apply text-[color:var(--color-cyan)] text-4xl;
+}
+
+@utility feature-title {
+  @apply text-xl font-semibold;
+}
+
+@utility feature-text {
+  @apply text-[color:var(--color-medium-gray)];
+}

@@ -1,0 +1,11 @@
+@layer utilities {
+  .testimonial {
+    @apply bg-white p-8 rounded-2xl shadow-soft max-w-md;
+  }
+  .testimonial-name {
+    @apply font-semibold text-lg mt-4;
+  }
+  .testimonial-role {
+    @apply text-[color:var(--color-medium-gray)] text-sm;
+  }
+}

@@ -1,0 +1,15 @@
+@utility shadow-card {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+@utility shadow-soft {
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
+}
+
+@utility shadow-hard {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+@utility shadow-hard-card {
+  box-shadow: 20px 20px 0px #FFFFFF40;
+}

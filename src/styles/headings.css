@@ -1,0 +1,15 @@
+@utility heading-1 {
+  @apply text-[120px] font-bold leading-[120px];
+}
+
+@utility heading-2 {
+  @apply text-[96px] font-semibold leading-[48px];
+}
+
+@utility heading-3 {
+  @apply text-[26px] font-normal leading-[30px];
+}
+
+@utility heading-4 {
+  @apply text-[16px] font-normal leading-[30px];
+}

@@ -1,0 +1,9 @@
+@utility space-section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+@utility space-section-sm {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}

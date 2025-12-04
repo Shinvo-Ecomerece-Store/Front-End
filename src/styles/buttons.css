@@ -1,0 +1,27 @@
+@utility btn {
+  @apply px-6 py-3 rounded-full font-semibold transition-all duration-200 inline-flex items-center gap-2;
+}
+
+@utility btn-primary {
+  @apply bg-(--color-cyan) text-white;
+
+  &:hover {
+    @apply bg-(--color-dark-cyan);
+  }
+}
+
+@utility btn-secondary {
+  @apply bg-(--color-light-gray) text-(--color-charcoal);
+}
+
+@utility btn-outline {
+  @apply border-2 border-(--color-cyan) text-(--color-cyan);
+
+  &:hover {
+    @apply bg-(--color-cyan) text-white;
+  }
+}
+
+@utility btn-ghost {
+  @apply text-(--color-charcoal) bg-transparent;
+}

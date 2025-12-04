@@ -1,0 +1,32 @@
+
+/* Headings */
+@import './headings.css';
+
+/* Buttons */
+@import './buttons.css';
+
+/* Shadows */
+@import './shadow.css';
+
+/* Spacing */
+@import './spacing.css';
+
+/* card */
+@import './card.css';
+
+/* Feature box */
+@import './featureBox.css';
+
+@utility bg-img-custom {
+  /* background-color:purple; */
+  /* background-image: url("../assets/images/bg.jpg"); */
+  background-size: cover;
+  background-position:center;
+  background-repeat: no-repeat;
+}
+
+.test{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}

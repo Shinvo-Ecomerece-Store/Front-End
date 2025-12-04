@@ -1,0 +1,18 @@
+@layer utilities {
+  .card {
+    @apply bg-white rounded-2xl shadow-card p-6 border border-[color:var(--color-border)] transition-transform duration-300;
+  }
+
+  .card:hover {
+    transform: translateY(-4px);
+    @apply shadow-hard;
+  }
+
+  .card-title {
+    @apply text-xl font-semibold mb-2;
+  }
+
+  .card-text {
+    @apply text-[color:var(--color-medium-gray)] text-sm leading-relaxed;
+  }
+}

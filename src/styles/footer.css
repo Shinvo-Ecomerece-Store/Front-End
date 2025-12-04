@@ -1,0 +1,8 @@
+@layer utilities {
+  .footer {
+    @apply bg-[color:var(--color-charcoal)] text-white py-12;
+  }
+  .footer-link {
+    @apply text-white/70 hover:text-white transition;
+  }
+}

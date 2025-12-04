@@ -1,0 +1,13 @@
+@layer utilities {
+  .pricing-card {
+    @apply border border-[color:var(--color-border)] p-10 rounded-3xl text-center bg-white shadow-card;
+  }
+
+  .pricing-price {
+    @apply text-5xl font-bold text-[color:var(--color-cyan)] mb-4;
+  }
+
+  .pricing-feature {
+    @apply text-[color:var(--color-medium-gray)] mb-2;
+  }
+}
