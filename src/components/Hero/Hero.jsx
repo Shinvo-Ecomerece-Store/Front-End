@@ -1,5 +1,4 @@
 import Navbar from "../Navbar/Navbar";
-import heroimage1 from '../assets/images/products/hero1.png'
 import { BsArrowUpRight } from "react-icons/bs";
 import { FaFacebookF } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa6";
