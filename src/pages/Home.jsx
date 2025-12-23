@@ -1,8 +1,8 @@
 import React from 'react'
 import Navbar from '../components/Navbar/Navbar'
 import UpperNavbar from '../components/Navbar/UpperNavbar'
-import Hero from '../components/hero'
 import Main from '../components/Main'
+import Hero from '../components/Hero/Hero'
 
 function Home() {
   return (
