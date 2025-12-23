@@ -9,6 +9,7 @@
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -19,13 +20,30 @@
   --animate-bounce-slow: bounce-slow 3s infinite;
 
   @keyframes bounce-slow {
-    0%, 100% {
+
+    0%,
+    100% {
       transform: translateY(-5%);
       animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
     }
+
     50% {
       transform: translateY(5%);
       animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+  }
+}
+
+@theme {
+  --animate-marquee: marquee 20s linear infinite;
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(-50%);
+    }
+
+    100% {
+      transform: translateX(0);
     }
   }
 }
@@ -46,11 +64,11 @@
 .gradient-border-nav {
   position: relative;
   width: 100%;
-  
+
   /* Remove overflow:hidden, we don't need it anymore */
   background: transparent;
   border-radius: 30px;
-  
+
   /* Flex settings */
   display: flex;
   align-items: center;
@@ -62,31 +80,32 @@
 .gradient-border-nav::before {
   content: "";
   position: absolute;
-  inset: 0; /* Stretches to fill the container */
-  z-index: -1; /* Puts it behind the content */
-  
+  inset: 0;
+  /* Stretches to fill the container */
+  z-index: -1;
+  /* Puts it behind the content */
+
   /* BORDER THICKNESS: Adjust this padding to make border thicker/thinner */
-  padding: 1.5px; 
-  
-  border-radius: 30px; /* Must match the container */
-  
+  padding: 1.5px;
+
+  border-radius: 30px;
+  /* Must match the container */
+
   /* The Rotating Gradient */
-  background: conic-gradient(
-    from var(--angle), 
-    #FFFFFF, 
-    #53C1CC, 
-    #06B5DB, 
-    #337588,
-    #FFFFFF
-  );
-  
+  background: conic-gradient(from var(--angle),
+      #FFFFFF,
+      #53C1CC,
+      #06B5DB,
+      #337588,
+      #FFFFFF);
+
   /* The Magic Mask: This cuts out the center */
-  -webkit-mask: 
-     linear-gradient(#fff 0 0) content-box, 
-     linear-gradient(#fff 0 0);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
-          mask-composite: exclude;
-          
+  mask-composite: exclude;
+
   /* The Animation */
   animation: rotate-border 4s linear infinite;
 }
