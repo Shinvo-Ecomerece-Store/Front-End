@@ -66,7 +66,7 @@
   width: 100%;
 
   /* Remove overflow:hidden, we don't need it anymore */
-  background: transparent;
+  background: linear-gradient(#0B1D1D, #445151);
   border-radius: 30px;
 
   /* Flex settings */

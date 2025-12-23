@@ -2,6 +2,7 @@ import Main from '../components/Main'
 import Hero from '../components/Hero/Hero'
 import Features from '../components/Features/Features'
 import Brands from '../components/Brands/Brands'
+import Categories from '../components/Categories/Categories'
 
 function Home() {
   return (
@@ -9,6 +10,7 @@ function Home() {
 
       <Hero />
       <Features />
+      <Categories />
       <Brands />
       <Main />
     </div>
