@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FiSearch, FiUser, FiShoppingCart, FiMenu, FiX } from "react-icons/fi";
 import { Link } from 'react-router-dom';
 import UpperNavbar from './UpperNavbar';
+import { IoSearch } from "react-icons/io5";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,6 +18,12 @@ function Navbar() {
         <nav className="w-full bg-white/10 backdrop-blur-md rounded-[30px] px-6 py-3 flex flex-col md:flex-row justify-between items-center shadow-lg nav-content relative z-50">
 
           <div className="w-full md:w-auto flex justify-between items-center">
+            <button
+              className="md:hidden text-white text-2xl focus:outline-none"
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              {isOpen ? <FiX /> : <FiMenu />}
+            </button>
             {/* LEFT: Logo */}
             <div className="flex-shrink-0">
               <Link to="/" className="text-2xl font-bold text-white tracking-wider hover:text-[#53C1CC] transition-colors">
@@ -25,12 +32,8 @@ function Navbar() {
             </div>
 
             {/* Mobile Menu Toggle */}
-            <button
-              className="md:hidden text-white text-2xl focus:outline-none"
-              onClick={() => setIsOpen(!isOpen)}
-            >
-              {isOpen ? <FiX /> : <FiMenu />}
-            </button>
+            {/* <IoSearch className="text-white/70 text-lg" /> */}
+            <FiShoppingCart className="text-2xl md:hidden" color='white' />
           </div>
 
           {/* CENTER: Navigation (Desktop) */}
@@ -42,7 +45,7 @@ function Navbar() {
 
           {/* RIGHT: Search + Icons (Desktop) */}
           <div className="hidden md:flex items-center gap-4">
-            <div className="flex items-center bg-white/20 rounded-full px-4 py-1.5 w-[300px] lg:w-[555px] h-[55px] border border-white/10 focus-within:bg-white/30 focus-within:border-[#53C1CC] transition-all">
+            <div className="hidden lg:flex items-center bg-white/20 rounded-full px-4 py-1.5 w-[300px] xl:w-[555px] h-[55px] border border-white/10 focus-within:bg-white/30 focus-within:border-[#53C1CC] transition-all">
               <input type="text" placeholder="Search" className="bg-transparent border-none outline-none text-sm text-white placeholder-gray-300 w-full" />
               <FiSearch className="text-white/70 w-[24px] h-[24px] text-lg cursor-pointer hover:text-white" />
             </div>
@@ -83,7 +86,6 @@ function Navbar() {
                 <FiUser className="text-2xl" />
               </button>
               <button className="relative text-white hover:text-[#53C1CC] transition-transform hover:scale-110">
-                <FiShoppingCart className="text-2xl" />
                 <span className="absolute -top-1 -right-2 bg-[#53C1CC] text-white text-[10px] font-bold w-4 h-4 flex items-center justify-center rounded-full">2</span>
               </button>
             </div>

@@ -37,7 +37,7 @@ const Hero = () => {
         </div>
 
         {/* Right Card - Phone (Bottom Right) */}
-        <div className="hidden lg:flex absolute bottom-32 right-10 xl:right-20 w-[250px] h-[250px] xl:w-[297px] xl:h-[282px] rounded-[40px] shadow-hard-card bg-img-custom bg-[url('../assets/images/products/hero1.png')] bg-cover bg-center items-center justify-center z-10 animate-float-delayed">
+        <div className="hidden lg:flex absolute bottom-32 right-10 xl:right-20 w-[250px] h-[250px] xl:w-[297px] xl:h-[282px] rounded-[40px] shadow-hard-card bg-img-custom bg-[url('../assets/images/products/hero1.png')] bg-cover bg-center items-center justify-center z-10 animate-float-delayed rotate-[20deg]">
           <Link to="/##"><BsArrowUpRight className="p-4 w-[70px] h-[60px] xl:w-[82px] xl:h-[72px] rounded-full bg-white text-cta-cyan" /></Link>
         </div>
 
