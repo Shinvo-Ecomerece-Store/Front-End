@@ -24,13 +24,13 @@ const Categories = () => {
 
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 w-full">
                     {categories.map((cat) => (
-                        <div key={cat.id} className="relative w-full aspect-square rounded-[30px] overflow-hidden group cursor-pointer shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <div key={cat.id} className="relative w-full aspect-square rounded-[30px] lg:rounded-[100px] overflow-hidden group cursor-pointer shadow-lg hover:shadow-xl transition-shadow duration-300">
                             <div
                                 className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
                                 style={{ backgroundImage: `url(${cat.image})` }}
                             ></div>
 
-                            <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/90 to-transparent"></div>
+                            <div className="absolute inset-x-0 bottom-0 h-full bg-gradient-to-t from-black to-transparent"></div>
 
                             <div className="absolute bottom-6 left-0 w-full text-center z-10">
                                 <h3 className="text-white text-xl md:text-2xl font-bold tracking-wide">{cat.title}</h3>
