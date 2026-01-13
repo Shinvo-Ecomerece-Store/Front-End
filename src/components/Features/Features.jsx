@@ -30,7 +30,7 @@ const Features = () => {
     ];
 
     return (
-        <div className="w-full max-w-[1600px] mx-auto px-2 md:px-4 py-6 md:py-10">
+        <div className="w-full max-w-[1920px] mx-auto px-2 md:px-4 py-6 md:py-10">
             <div className="grid grid-cols-4 gap-2 md:gap-6">
                 {features.map((feature) => (
                     <div key={feature.id} className="bg-white border border-gray-200 rounded-[10px] md:rounded-[20px] p-2 md:p-6 flex flex-col items-center justify-center text-center gap-2 md:gap-4 hover:shadow-lg transition-shadow cursor-pointer h-[100px] md:h-[150px]">

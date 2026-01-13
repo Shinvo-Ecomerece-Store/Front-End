@@ -4,7 +4,7 @@ import { FaFacebookF, FaInstagram, FaTwitter, FaPaperPlane } from 'react-icons/f
 const Footer = () => {
     return (
         <footer className="w-full bg-[#1a1a1a] text-white pt-16 pb-0">
-            <div className="max-w-7xl mx-auto px-6 mb-12">
+            <div className="max-w-[1920px] mx-auto px-6 mb-12">
 
                 {/* Logo */}
                 <div className="mb-12">
@@ -90,7 +90,7 @@ const Footer = () => {
 
             {/* Copyright Bar */}
             <div className="bg-gray-700 w-full py-6">
-                <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-gray-300 text-sm">
+                <div className="max-w-[1920px] mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-gray-300 text-sm">
                     <p>&copy; 2025 [Your Store Name]. All Rights Reserved.</p>
                     <div className="flex gap-8 mt-4 md:mt-0">
                         <a href="#" className="hover:text-white transition-colors">Home</a>

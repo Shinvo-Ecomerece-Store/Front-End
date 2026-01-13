@@ -1,11 +1,15 @@
 import { FaArrowRight } from "react-icons/fa6";
+import img1 from "../../assets/categoery/1.jpg";
+import img2 from "../../assets/categoery/2.jpg";
+import img3 from "../../assets/categoery/3.jpg";
+import img4 from "../../assets/categoery/4.jpg";
 
 const Categories = () => {
     const categories = [
-        { id: 1, title: "Smart Watch", image: "cat_smartwatch.png" },
-        { id: 2, title: "Power Bank", image: "cat_powerbank.png" },
-        { id: 3, title: "Charger", image: "cat_charger.png" },
-        { id: 4, title: "Earbuds", image: "cat_earbuds.png" },
+        { id: 1, title: "Smart Watch", image: img1 },
+        { id: 2, title: "Power Bank", image: img2 },
+        { id: 3, title: "Charger", image: img3 },
+        { id: 4, title: "Earbuds", image: img4 },
     ];
 
     return (
@@ -23,7 +27,7 @@ const Categories = () => {
                         <div key={cat.id} className="relative w-full aspect-square rounded-[30px] overflow-hidden group cursor-pointer shadow-lg hover:shadow-xl transition-shadow duration-300">
                             <div
                                 className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
-                                style={{ backgroundImage: `url(/src/assets/${cat.image})` }}
+                                style={{ backgroundImage: `url(${cat.image})` }}
                             ></div>
 
                             <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/90 to-transparent"></div>
