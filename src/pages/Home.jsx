@@ -14,8 +14,10 @@ import Categories from '../components/Categories/Categories'
 function Home() {
   return (
     <div className='w-[100vw]'>
-
       <Hero />
+      <Features />
+      <Categories />
+      <Brands />
       <Bestsellers />
       <ShopBanner />
       <PowerYourLife />
@@ -23,9 +25,7 @@ function Home() {
       <Testimonials />
       <Trust />
       <ContactInfo />
-      <Features />
-      <Categories />
-      <Brands />
+
       <Footer />
     </div>
   )
