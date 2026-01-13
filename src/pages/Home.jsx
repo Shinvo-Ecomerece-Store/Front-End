@@ -17,10 +17,10 @@ function Home() {
       <Hero />
       <Features />
       <Categories />
-      <Brands />
       <Bestsellers />
       <ShopBanner />
       <PowerYourLife />
+      <Brands />
       <NewArrivals />
       <Testimonials />
       <Trust />

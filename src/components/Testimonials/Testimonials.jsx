@@ -36,7 +36,7 @@ const Testimonials = () => {
             </h2>
 
             {/* Reviews Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl px-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-[1920px] px-4">
                 {reviews.map((review) => (
                     <div key={review.id} className="flex flex-col items-center">
                         {/* Card */}

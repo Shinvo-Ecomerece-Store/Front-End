@@ -15,20 +15,26 @@ const Brands = () => {
     ];
 
     return (
-        <div className="w-full bg-secondary-bg py-8 overflow-hidden">
-            <div className="flex w-[200%] animate-marquee">
-                {/* First Set */}
-                <div className="flex w-1/2 justify-around items-center gap-8 md:gap-16 px-4">
+        <div className="w-full bg-gray-100 py-12 overflow-hidden border-t border-b border-gray-200">
+            {/* 
+                Wrapper must be wide enough. 
+                If we use a fixed width percentage like 200%, it implies the content exactly fills 100% twice.
+                Better approach with Tailwind arbitrary values if needed, or stick to the double-render logic.
+             */}
+            <div className="flex w-max animate-marquee hover:[animation-play-state:paused] items-center">
+                {/* First Set of Brands */}
+                <div className="flex items-center gap-16 md:gap-24 px-8 md:px-12 shrink-0">
                     {brands.map((brand) => (
-                        <div key={brand.id} className="flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity">
+                        <div key={brand.id} className="flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity duration-300 grayscale hover:grayscale-0 cursor-pointer">
                             {brand.icon}
                         </div>
                     ))}
                 </div>
-                {/* Duplicate Set for Seamless Loop */}
-                <div className="flex w-1/2 justify-around items-center gap-8 md:gap-16 px-4">
+
+                {/* Second Set of Brands (Duplicate for Loop) */}
+                <div className="flex items-center gap-16 md:gap-24 px-8 md:px-12 shrink-0">
                     {brands.map((brand) => (
-                        <div key={`dup-${brand.id}`} className="flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity">
+                        <div key={`dup-${brand.id}`} className="flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity duration-300 grayscale hover:grayscale-0 cursor-pointer">
                             {brand.icon}
                         </div>
                     ))}

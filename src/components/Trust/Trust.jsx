@@ -5,7 +5,7 @@ const Trust = () => {
     return (
         <div className="w-full py-20 bg-white flex flex-col items-center justify-center px-4">
             {/* Heading */}
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-16 leading-tight max-w-4xl">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-16 leading-tight max-w-[1920px]">
                 Premium Mobile Accessories <br className='hidden md:block' /> You Can <span className="text-cyan-400">Trust</span>
             </h2>
 

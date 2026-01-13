@@ -48,10 +48,10 @@ const Bestsellers = () => {
     };
 
     return (
-        <div className="w-full py-16 flex flex-col items-center bg-white overflow-hidden">
+        <div className="w-full max-w-[1920px] mx-auto py-16 flex flex-col items-center bg-white overflow-hidden">
             <h2 className="text-4xl font-bold text-gray-900 mb-12">Our Bestsellers</h2>
 
-            <div className="relative w-full max-w-5xl h-[500px] flex items-center justify-center">
+            <div className="relative w-full max-w-[1920px] h-[500px] flex items-center justify-center">
 
                 {products.map((product, index) => {
                     const position = getPosition(index);
@@ -63,7 +63,7 @@ const Bestsellers = () => {
                     let className = "absolute transition-all duration-500 ease-in-out flex flex-col items-center rounded-3xl p-6 shadow-xl ";
 
                     if (isCenter) {
-                        className += "z-20 w-[400px] h-[500px] bg-gradient-to-b from-cyan-100 to-cyan-400 scale-100 opacity-100";
+                        className += "z-20 w-[330px] sm:w-[400px] h-[500px] bg-gradient-to-b from-cyan-100 to-cyan-400 scale-100 opacity-100";
                     } else if (isLeft) {
                         className += "z-10 w-[350px] h-[400px] bg-cyan-50 -translate-x-[350px] scale-90 opacity-80 blur-[1px]";
                     } else if (isRight) {
@@ -123,13 +123,13 @@ const Bestsellers = () => {
                 {/* Navigation Arrows */}
                 <button
                     onClick={prevSlide}
-                    className="absolute left-[20%] z-30 bg-white p-3 rounded-full shadow-lg text-cyan-500 hover:bg-gray-50 transition-colors"
+                    className="absolute left-[10%] sm:left-[20%] z-30 bg-white p-3 rounded-full shadow-lg text-cyan-500 hover:bg-gray-50 transition-colors"
                 >
                     <FaChevronLeft size={24} />
                 </button>
                 <button
                     onClick={nextSlide}
-                    className="absolute right-[20%] z-30 bg-white p-3 rounded-full shadow-lg text-cyan-500 hover:bg-gray-50 transition-colors"
+                    className="absolute right-[10%] sm:right-[20%] z-30 bg-white p-3 rounded-full shadow-lg text-cyan-500 hover:bg-gray-50 transition-colors"
                 >
                     <FaChevronRight size={24} />
                 </button>

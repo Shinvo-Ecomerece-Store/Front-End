@@ -3,9 +3,9 @@ import pixelLifestyle from '../../assets/pixel_lifestyle.png';
 
 const ShopBanner = () => {
     return (
-        <div className="w-full px-4 py-8 flex justify-center">
+        <div className="w-full mx-auto px-4 py-8 flex justify-center">
             <div
-                className="relative w-full max-w-7xl h-[300px] md:h-[400px] rounded-[30px] overflow-hidden shadow-lg group"
+                className="relative w-full max-w-[1920px] h-[300px] md:h-[400px] rounded-[30px] overflow-hidden shadow-lg group"
             >
                 {/* Background Image */}
                 <img

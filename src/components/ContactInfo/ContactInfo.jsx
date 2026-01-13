@@ -24,19 +24,19 @@ const ContactInfoItems = [
 
 const ContactInfo = () => {
   return (
-    <div className="w-full bg-gray-300 py-16 px-4">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div className="w-full bg-gray-300 py-8 md:py-16 px-2 md:px-4">
+      <div className="max-w-[1920px] mx-auto grid grid-cols-3 gap-2 md:gap-8 divide-x divide-gray-400/0 md:divide-none">
         {ContactInfoItems.map((item) => (
-          <div key={item.id} className="flex items-center justify-center md:justify-start gap-6">
+          <div key={item.id} className="flex flex-row items-center justify-center gap-2 md:gap-6 text-left">
             {/* Icon */}
-            <div className="text-cyan-400 text-5xl">
+            <div className="text-cyan-400 text-2xl md:text-6xl shrink-0">
               {item.icon}
             </div>
-            
+
             {/* Text */}
-            <div className="flex flex-col">
-              <h3 className="text-2xl font-bold text-black">{item.title}</h3>
-              <p className="text-gray-700 font-medium">{item.subtitle}</p>
+            <div className="flex flex-col min-w-0">
+              <h3 className="text-xs md:text-2xl font-bold text-black truncate">{item.title}</h3>
+              <p className="text-gray-700 text-[9px] md:text-base font-medium leading-tight line-clamp-2">{item.subtitle}</p>
             </div>
           </div>
         ))}

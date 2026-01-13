@@ -10,7 +10,7 @@ const Categories = () => {
 
     return (
         <div className="w-full bg-white py-20">
-            <div className="max-w-7xl mx-auto px-6 flex flex-col items-center gap-16">
+            <div className="max-w-[1920px] mx-auto px-6 flex flex-col items-center gap-16">
 
                 <div className="text-center">
                     <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
