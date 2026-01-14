@@ -10,15 +10,18 @@ import ContactInfo from '../components/ContactInfo/ContactInfo'
 import Footer from '../components/Footer/Footer'
 import Brands from '../components/Brands/Brands'
 import Categories from '../components/Categories/Categories'
+import shop1 from '../assets/shop1.gif'
+import shop2 from '../assets/shop2.gif'
 
 function Home() {
   return (
     <div className='w-[100vw]'>
       <Hero />
-      <Features />
+      {/* <Features /> */}
       <Categories />
       <Bestsellers />
-      <ShopBanner />
+      <ShopBanner imgageShop={shop1} />
+      <ShopBanner imgageShop={shop2} />
       <PowerYourLife />
       <Brands />
       <NewArrivals />

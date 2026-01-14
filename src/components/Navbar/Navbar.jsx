@@ -8,7 +8,7 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="top-0 left-0 w-[calc(100%-20px)] z-50 fixed">
+    <div className="top-0 left-0 z-50 fixed w-full px-4">
       <UpperNavbar />
 
       {/* Main Container */}

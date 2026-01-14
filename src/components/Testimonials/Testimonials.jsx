@@ -28,7 +28,7 @@ const reviews = [
 
 const Testimonials = () => {
     return (
-        <div className="w-full py-20 flex flex-col items-center bg-white">
+        <div className="w-full py-10 flex flex-col items-center bg-white">
             {/* Header */}
             <span className="text-cyan-400 font-bold uppercase tracking-widest text-sm mb-4">Testimonals</span>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-20 text-center">

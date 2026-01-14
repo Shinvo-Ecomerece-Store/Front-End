@@ -18,13 +18,13 @@ const Hero = () => {
         {/* --- Social Icons --- */}
         {/* Mobile: Vertical on Right. Desktop: Horizontal Top Right */}
         <div className="absolute right-4 top-[20%] flex flex-col gap-4 z-20 lg:right-10 lg:flex-row">
-          <div className="w-[40px] h-[40px] lg:w-[50px] lg:h-[50px] bg-white flex items-center justify-center rounded-full cursor-pointer hover:bg-gray-100 transition-colors">
+          <div className="w-[40px] h-[40px] lg:w-[50px] lg:h-[50px] bg-white hover:bg-[#02D5E0] flex items-center justify-center rounded-full cursor-pointer transition-colors">
             <FaFacebookF className="w-[20px] h-[20px] lg:w-[24px] lg:h-[24px] text-black" />
           </div>
-          <div className="w-[40px] h-[40px] lg:w-[50px] lg:h-[50px] bg-white flex items-center justify-center rounded-full cursor-pointer hover:bg-gray-100 transition-colors">
+          <div className="w-[40px] h-[40px] lg:w-[50px] lg:h-[50px] bg-white hover:bg-[#02D5E0] flex items-center justify-center rounded-full cursor-pointer transition-colors">
             <FaInstagram className="w-[20px] h-[20px] lg:w-[24px] lg:h-[24px] text-black" />
           </div>
-          <div className="w-[40px] h-[40px] lg:w-[50px] lg:h-[50px] bg-white flex items-center justify-center rounded-full cursor-pointer hover:bg-gray-100 transition-colors">
+          <div className="w-[40px] h-[40px] lg:w-[50px] lg:h-[50px] bg-white hover:bg-[#02D5E0] flex items-center justify-center rounded-full cursor-pointer transition-colors">
             <IoLogoWhatsapp className="w-[20px] h-[20px] lg:w-[24px] lg:h-[24px] text-black" />
           </div>
         </div>
@@ -33,12 +33,12 @@ const Hero = () => {
 
         {/* Left Card - Watch (Mid Left) */}
         <div className="hidden lg:flex absolute top-[22%] left-20 w-[250px] h-[250px] xl:w-[297px] xl:h-[282px] rounded-[40px] shadow-hard-card bg-img-custom bg-[url('../assets/images/products/hero1.png')] bg-cover bg-center items-center justify-center z-10 animate-float">
-          <Link to="/##"><BsArrowUpRight className="p-4 w-[70px] h-[60px] xl:w-[82px] xl:h-[72px] rounded-full bg-white text-cta-cyan" /></Link>
+          <Link to="/##"><BsArrowUpRight className="p-4 w-[70px] h-[60px] xl:w-[82px] xl:h-[72px] rounded-full bg-white text-cta-cyan hover:bg-[#02D5E0] hover:shadow-[#09D8DF] shadow-4xl hover:text-white transition-colors" /></Link>
         </div>
 
         {/* Right Card - Phone (Bottom Right) */}
         <div className="hidden lg:flex absolute bottom-32 right-10 xl:right-20 w-[250px] h-[250px] xl:w-[297px] xl:h-[282px] rounded-[40px] shadow-hard-card bg-img-custom bg-[url('../assets/images/products/hero1.png')] bg-cover bg-center items-center justify-center z-10 animate-float-delayed rotate-[20deg]">
-          <Link to="/##"><BsArrowUpRight className="p-4 w-[70px] h-[60px] xl:w-[82px] xl:h-[72px] rounded-full bg-white text-cta-cyan" /></Link>
+          <Link to="/##"><BsArrowUpRight className="p-4 w-[70px] h-[60px] xl:w-[82px] xl:h-[72px] rounded-full bg-white text-cta-cyan hover:bg-[#02D5E0] shadow-[#09D8DF] shadow-4xl hover:text-white transition-colors" /></Link>
         </div>
 
 

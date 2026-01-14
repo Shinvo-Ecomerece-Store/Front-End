@@ -1,15 +1,13 @@
-import React from 'react';
-import pixelLifestyle from '../../assets/pixel_lifestyle.png';
 
-const ShopBanner = () => {
+const ShopBanner = ({ imgageShop }) => {
     return (
         <div className="w-full mx-auto px-4 py-8 flex justify-center">
             <div
-                className="relative w-full max-w-[1920px] h-[300px] md:h-[400px] rounded-[30px] overflow-hidden shadow-lg group"
+                className="relative w-full max-w-[1920px] h-[200px] lg:h-[300px] xl:h-[400px] rounded-[30px] overflow-hidden shadow-lg group"
             >
                 {/* Background Image */}
                 <img
-                    src={pixelLifestyle}
+                    src={imgageShop}
                     alt="Shop Pixel Cases"
                     className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />

@@ -13,7 +13,7 @@ const Categories = () => {
     ];
 
     return (
-        <div className="w-full bg-white py-20">
+        <div className="w-full bg-white py-10">
             <div className="max-w-[1920px] mx-auto px-6 flex flex-col items-center gap-16">
 
                 <div className="text-center">

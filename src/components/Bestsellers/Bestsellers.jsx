@@ -13,7 +13,7 @@ const Bestsellers = () => {
             name: 'UGREEN',
             description: 'Nexode 45w charger',
             image: chargerImg,
-            thumbnails: [chargerImg, chargerImg], // Mock thumbnails
+            thumbnails: [chargerImg, chargerImg],
         },
         {
             id: 2,
@@ -48,10 +48,10 @@ const Bestsellers = () => {
     };
 
     return (
-        <div className="w-full max-w-[1920px] mx-auto py-16 flex flex-col items-center bg-white overflow-hidden">
+        <div className="w-full max-w-[1920px] mx-auto py-10 flex flex-col items-center bg-white overflow-hidden">
             <h2 className="text-4xl font-bold text-gray-900 mb-12">Our Bestsellers</h2>
 
-            <div className="relative w-full max-w-[1920px] h-[500px] flex items-center justify-center">
+            <div className="relative w-full max-w-[1920px] h-[500px] min-[1300px]:h-[700px] flex items-center justify-center">
 
                 {products.map((product, index) => {
                     const position = getPosition(index);
@@ -63,11 +63,11 @@ const Bestsellers = () => {
                     let className = "absolute transition-all duration-500 ease-in-out flex flex-col items-center rounded-3xl p-6 shadow-xl ";
 
                     if (isCenter) {
-                        className += "z-20 w-[330px] sm:w-[400px] h-[500px] bg-gradient-to-b from-cyan-100 to-cyan-400 scale-100 opacity-100";
+                        className += "z-20 w-[350px] min-[430px]:w-[400px] min-[1300px]:w-[600px] h-[500px] min-[1300px]:h-[700px] bg-gradient-to-b from-cyan-100 to-cyan-400 scale-100 opacity-100";
                     } else if (isLeft) {
-                        className += "z-10 w-[350px] h-[400px] bg-cyan-50 -translate-x-[350px] scale-90 opacity-80 blur-[1px]";
+                        className += "z-10 w-[350px] min-[1300px]:w-[450px] h-[400px] min-[1300px]:h-[550px] bg-cyan-50 -translate-x-[350px] min-[1300px]:-translate-x-[500px] scale-90 opacity-80 blur-[1px]";
                     } else if (isRight) {
-                        className += "z-10 w-[350px] h-[400px] bg-cyan-50 translate-x-[350px] scale-90 opacity-80 blur-[1px]";
+                        className += "z-10 w-[350px] min-[1300px]:w-[450px] h-[400px] min-[1300px]:h-[550px] bg-cyan-50 translate-x-[350px] min-[1300px]:translate-x-[500px] scale-90 opacity-80 blur-[1px]";
                     } else {
                         className += "hidden";
                     }
@@ -87,7 +87,7 @@ const Bestsellers = () => {
                                 <img
                                     src={product.image}
                                     alt={product.name}
-                                    className={`relative object-contain transition-all duration-500 ${isCenter ? 'h-64 drop-shadow-2xl' : 'h-40 grayscale-[0.3]'}`}
+                                    className={`relative object-contain transition-all duration-500 ${isCenter ? 'h-64 min-[1300px]:h-96 drop-shadow-2xl' : 'h-40 min-[1300px]:h-60 grayscale-[0.3]'}`}
                                 />
                             </div>
 

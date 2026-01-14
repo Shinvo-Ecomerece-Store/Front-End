@@ -38,7 +38,7 @@ const products = [
 
 const NewArrivals = () => {
     return (
-        <div className="w-full py-16 flex flex-col items-center gap-12 bg-white">
+        <div className="w-full py-10 flex flex-col items-center gap-12 bg-white">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900">New Arrivals</h2>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-4 max-w-[1920px] mx-auto">
