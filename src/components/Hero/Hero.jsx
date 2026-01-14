@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <div className="w-full max-h-[1380px] h-screen bg-img-custom bg-[url('../assets/images/bg.jpg')] bg-cover bg-center mx-auto flex flex-col relative overflow-hidden">
+    <div className="w-full max-h-[1380px] h-[650px] lg:h-[900px] bg-img-custom bg-[url('../assets/images/bg.jpg')] bg-cover bg-center mx-auto flex flex-col relative overflow-hidden">
       <Navbar />
 
       {/* Main Content Area - Relative for positioning */}
@@ -56,7 +56,7 @@ const Hero = () => {
         {/* --- CTA Button --- */}
         {/* Mobile: Bottom Center (below text). Desktop: Bottom Center */}
         <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 lg:bottom-3 z-20">
-          <div className="btn-primary w-[200px] h-[70px] xl:w-[254px] xl:h-[93px] flex items-center justify-center gap-4 rounded-full text-[20px] xl:text-[26px] text-black font-semibold cursor-pointer hover:scale-105 transition-transform">
+          <div className="btn-primary w-[200px] h-[70px] xl:w-[230px] xl:h-[80px] flex items-center justify-center gap-4 rounded-full text-[18px] xl:text-[26px] text-black font-semibold cursor-pointer hover:scale-105 transition-transform">
             Shop Now
             <Link to="/##"><BsArrowUpRight className="p-3 w-[50px] h-[40px] xl:p-4 xl:w-[69px] xl:h-[56px] rounded-full bg-white text-cta-cyan" /></Link>
           </div>

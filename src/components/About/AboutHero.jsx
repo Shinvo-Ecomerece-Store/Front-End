@@ -1,6 +1,7 @@
 import React from 'react';
 import aboutHeroBg from '../../assets/about_hero_bg.png';
 import { FaUser, FaShoppingCart, FaSearch, FaBars } from 'react-icons/fa';
+import Navbar from '../Navbar/Navbar';
 
 const AboutHero = () => {
     return (
@@ -12,25 +13,7 @@ const AboutHero = () => {
             </div>
 
             {/* Navbar Overlay - Simulating the one in the screenshot for this page specific header */}
-            <div className="absolute top-0 left-0 w-full z-20 p-6">
-                <div className="max-w-7xl mx-auto flex items-center justify-between text-white bg-white/10 backdrop-blur-md rounded-full px-8 py-3">
-                    <div className="text-xl font-bold">LOGO</div>
-                    <div className="hidden md:flex gap-8 text-sm">
-                        <a href="/" className="hover:text-cyan-400 transition-colors">Home</a>
-                        <a href="/about" className="text-cyan-400">About Us</a>
-                        <a href="#" className="hover:text-cyan-400 transition-colors">Categories</a>
-                    </div>
-
-                    <div className="flex items-center gap-4">
-                        <div className="relative hidden md:block">
-                            <input type="text" placeholder="Search" className="bg-gray-200 text-black rounded-full px-4 py-1 text-sm focus:outline-none w-64" />
-                            <FaSearch className="absolute right-3 top-1.5 text-gray-500 text-xs" />
-                        </div>
-                        <FaUser className="hover:text-cyan-400 cursor-pointer" />
-                        <FaShoppingCart className="hover:text-cyan-400 cursor-pointer" />
-                    </div>
-                </div>
-            </div>
+            <Navbar />
 
 
             {/* Hero Content */}

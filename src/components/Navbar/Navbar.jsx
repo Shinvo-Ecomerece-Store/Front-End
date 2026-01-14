@@ -8,11 +8,11 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="top-0 left-0 w-full z-50 fixed px-2">
+    <div className="top-0 left-0 w-[calc(100%-20px)] z-50 fixed">
       <UpperNavbar />
 
       {/* Main Container */}
-      <div className="max-w-[1820px] mx-auto mt-2 relative rounded-[30px] gradient-border-nav p-[1px]">
+      <div className="max-w-[1820px] mx-auto mt-2 relative rounded-[30px] gradient-border-nav">
 
         {/* Inner Nav Content (Glassmorphism) */}
         <nav className="w-full bg-white/10 backdrop-blur-md rounded-[30px] px-6 py-3 flex flex-col md:flex-row justify-between items-center shadow-lg nav-content relative z-50">
