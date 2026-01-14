@@ -1,5 +1,5 @@
 
-const ShopBanner = ({ imgageShop }) => {
+const ShopBanner = ({ imgageShop, title }) => {
     return (
         <div className="w-full mx-auto px-4 py-8 flex justify-center">
             <div
@@ -18,12 +18,12 @@ const ShopBanner = ({ imgageShop }) => {
                 {/* Content */}
                 <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
                     <h2 className="text-4xl md:text-5xl font-bold text-white mb-2 drop-shadow-md">
-                        Shop Pixel Cases
+                        {title}
                     </h2>
                     {/* Optional google logo or subtitle if needed, keeping it simple for now as per design */}
-                    <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mt-4 backdrop-blur-sm">
+                    {/* <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mt-4 backdrop-blur-sm">
                         <span className="text-white text-2xl font-bold">G</span>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>

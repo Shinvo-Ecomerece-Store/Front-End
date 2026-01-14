@@ -20,8 +20,8 @@ function Home() {
       {/* <Features /> */}
       <Categories />
       <Bestsellers />
-      <ShopBanner imgageShop={shop1} />
-      <ShopBanner imgageShop={shop2} />
+      <ShopBanner imgageShop={shop1} title="Shop Pixel Cases" />
+      <ShopBanner imgageShop={shop2} title="Shop Mobile Holder" />
       <PowerYourLife />
       <Brands />
       <NewArrivals />

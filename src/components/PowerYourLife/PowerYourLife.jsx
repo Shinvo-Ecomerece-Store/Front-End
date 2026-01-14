@@ -18,7 +18,7 @@ const PowerYourLife = () => {
                         className="absolute inset-0 w-full h-full object-cover"
                     />
                     {/* Gradient Overlay for better integration */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent to-gray-200/50 md:bg-gradient-to-r md:from-transparent md:to-gray-200"></div>
+                    {/* <div className="absolute inset-0 bg-gradient-to-r from-transparent to-gray-200/50 md:from-transparent md:to-gray-200"></div> */}
                 </div>
 
                 {/* Text Section (Right) */}
@@ -56,7 +56,7 @@ const PowerYourLife = () => {
                         className="absolute inset-0 w-full h-full object-cover"
                     />
                     {/* Gradient Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-l from-transparent to-gray-200/50 md:bg-gradient-to-l md:from-transparent md:to-gray-200"></div>
+                    {/* <div className="absolute inset-0 bg-gradient-to-l from-transparent to-gray-200/50 md:bg-gradient-to-l md:from-transparent md:to-gray-200"></div> */}
                 </div>
             </div>
         </div>
