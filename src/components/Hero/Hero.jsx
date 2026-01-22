@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <div className="w-full max-h-[1380px] h-[650px] lg:h-[900px] bg-img-custom bg-[url('../assets/images/bg.jpg')] bg-cover bg-center mx-auto flex flex-col relative overflow-hidden">
+    <div className="w-full max-h-[1380px] h-[650px] lg:h-[1000px] bg-img-custom bg-[url('../assets/images/bg.jpg')] bg-cover bg-center mx-auto flex flex-col relative overflow-hidden">
       <Navbar />
 
       {/* Main Content Area - Relative for positioning */}
@@ -32,33 +32,33 @@ const Hero = () => {
         {/* --- Product Cards (Desktop Only) --- */}
 
         {/* Left Card - Watch (Mid Left) */}
-        <div className="hidden lg:flex absolute top-[22%] left-20 w-[250px] h-[250px] xl:w-[297px] xl:h-[282px] rounded-[40px] shadow-hard-card bg-img-custom bg-[url('../assets/images/products/hero1.png')] bg-cover bg-center items-center justify-center z-10 animate-float">
+        <div className="hidden lg:flex absolute top-[18%] left-20 w-[200px] h-[200px] xl:w-[230px] xl:h-[230px] rounded-[40px] shadow-hard-card bg-img-custom bg-[url('../assets/images/products/hero1.png')] bg-cover bg-center items-center justify-center z-10 animate-float">
           <Link to="/##"><BsArrowUpRight className="p-4 w-[70px] h-[60px] xl:w-[82px] xl:h-[72px] rounded-full bg-white text-cta-cyan hover:bg-[#02D5E0] hover:shadow-[#09D8DF] shadow-4xl hover:text-white transition-colors" /></Link>
         </div>
 
         {/* Right Card - Phone (Bottom Right) */}
-        <div className="hidden lg:flex absolute bottom-32 right-10 xl:right-20 w-[250px] h-[250px] xl:w-[297px] xl:h-[282px] rounded-[40px] shadow-hard-card bg-img-custom bg-[url('../assets/images/products/hero1.png')] bg-cover bg-center items-center justify-center z-10 animate-float-delayed rotate-[20deg]">
+        <div className="hidden lg:flex absolute bottom-40 right-10 xl:right-20 w-[200px] h-[200px] xl:w-[230px] xl:h-[230px] rounded-[40px] shadow-hard-card bg-img-custom bg-[url('../assets/images/products/hero1.png')] bg-cover bg-center items-center justify-center z-10 animate-float-delayed rotate-[20deg]">
           <Link to="/##"><BsArrowUpRight className="p-4 w-[70px] h-[60px] xl:w-[82px] xl:h-[72px] rounded-full bg-white text-cta-cyan hover:bg-[#02D5E0] shadow-[#09D8DF] shadow-4xl hover:text-white transition-colors" /></Link>
         </div>
 
 
         {/* --- Text Content --- */}
         {/* Mobile: Bottom Center. Desktop: Bottom Left */}
-        <div className="absolute bottom-32 w-full px-4 text-center lg:text-left lg:bottom-28 lg:left-20 lg:w-auto z-20">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-[80px] font-bold leading-tight mb-4 text-white">
+        <div className="absolute bottom-40 w-full px-4 text-center lg:text-left lg:bottom-28 lg:left-20 lg:w-auto z-20">
+          <h1 className="text-4xl md:text-6xl lg:text-6xl xl:text-[70px] font-bold leading-tight mb-4 text-white">
             Elevate Your<br className="hidden lg:block" /> Everyday
           </h1>
-          <p className="text-lg md:text-xl lg:text-[26px] text-white font-[400] max-w-[600px] mx-auto lg:mx-0">
+          <p className="text-[16px] md:text-[18px] lg:text-[20px] text-white font-[400] max-w-[600px] mx-auto lg:mx-0">
             Smart accessories for a connected life. Shop Mobile Cases, Earbuds, Cables & More.
           </p>
         </div>
 
         {/* --- CTA Button --- */}
         {/* Mobile: Bottom Center (below text). Desktop: Bottom Center */}
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 lg:bottom-3 z-20">
-          <div className="btn-primary w-[200px] h-[70px] xl:w-[230px] xl:h-[80px] flex items-center justify-center gap-4 rounded-full text-[18px] xl:text-[26px] text-black font-semibold cursor-pointer hover:scale-105 transition-transform">
+        <div className="absolute bottom-10 lg:bottom-15 left-1/2 transform -translate-x-1/2 z-20">
+          <div className="btn-primary xl:px-2 w-[150px] lg:h-[60px] h-[50px] sm:w-[180px] sm:h-[50px] xl:w-[230px] xl:h-[70px] flex items-center justify-center gap-4 rounded-full text-[14px] sm:text-[18px] xl:text-[24px] text-black font-semibold cursor-pointer hover:scale-105 transition-transform">
             Shop Now
-            <Link to="/##"><BsArrowUpRight className="p-3 w-[50px] h-[40px] xl:p-4 xl:w-[69px] xl:h-[56px] rounded-full bg-white text-cta-cyan" /></Link>
+            <Link to="/##"><BsArrowUpRight className="p-3 w-[40px] h-[35px] sm:w-[50px] sm:h-[40px] xl:p-4 xl:w-[69px] xl:h-[56px] rounded-full bg-white text-cta-cyan" /></Link>
           </div>
         </div>
 
