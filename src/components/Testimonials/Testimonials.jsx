@@ -24,6 +24,27 @@ const reviews = [
         name: 'John Doe',
         title: 'Tech Enthusiast',
     },
+    {
+        id: 4,
+        number: 4,
+        quote: '"The product quality is amazing! I was worried about compatibility, but everything works perfectly with my setup. Highly recommend!"',
+        name: 'Sarah Smith',
+        title: 'Verified Buyer',
+    },
+    {
+        id: 5,
+        number: 5,
+        quote: '"Fast shipping and great customer support. Had a small question and they answered immediately. The charger is super fast!"',
+        name: 'Mike Johnson',
+        title: 'Gadget Lover',
+    },
+    {
+        id: 6,
+        number: 6,
+        quote: '"Best purchase I\'ve made this year. The build quality is solid and it feels very premium. Definitely worth the price."',
+        name: 'Emily Davis',
+        title: 'Designer',
+    },
 ];
 
 const Testimonials = () => {
@@ -36,13 +57,13 @@ const Testimonials = () => {
             </h2>
 
             {/* Reviews Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-[1920px] px-4">
+            <div className="flex overflow-x-auto gap-8 w-full max-w-[1920px] px-4 pb-8 pt-10 snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']">
                 {reviews.map((review) => (
-                    <div key={review.id} className="flex flex-col items-center">
+                    <div key={review.id} className="flex flex-col items-center min-w-[85vw] sm:min-w-[400px] snap-center">
                         {/* Card */}
-                        <div className="relative bg-gray-100 rounded-[40px] p-8 pt-12 pb-16 flex flex-col items-center text-center shadow-sm">
+                        <div className="relative bg-gray-100 rounded-[40px] p-8 pt-12 pb-16 flex flex-col items-center text-center shadow-sm w-full">
                             {/* Number Badge */}
-                            <div className="absolute -top-6 w-12 h-12 bg-cyan-400 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-md border-4 border-white">
+                            <div className="absolute -top-6 w-12 h-12 bg-cyan-400 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-md border-4 border-white z-10">
                                 {review.number}
                             </div>
 

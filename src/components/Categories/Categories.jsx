@@ -24,7 +24,7 @@ const Categories = () => {
 
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 w-full">
                     {categories.map((cat) => (
-                        <div key={cat.id} className="relative h-[100%] w-[100%] sm:h-[80%] sm:w-[98%] aspect-square rounded-[30px] sm:rounded-[60px] md:rounded-[90px] lg:rounded-[60px] 2xl:rounded-[100px] overflow-hidden group cursor-pointer shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <div key={cat.id} className="relative h-[100%] w-[100%] sm:h-[80%] sm:w-[98%] aspect-square rounded-[30px] sm:rounded-[60px] md:rounded-[90px] lg:rounded-[60px] 2xl:rounded-[100px] overflow-hidden group cursor-pointer shadow-lg hover:shadow-xl transition-shadow duration-300 shadow-lg shadow-cyan-500">
                             <div
                                 className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
                                 style={{ backgroundImage: `url(${cat.image})` }}
@@ -33,7 +33,7 @@ const Categories = () => {
                             <div className="absolute inset-x-0 bottom-0 h-full bg-gradient-to-t from-black to-transparent"></div>
 
                             <div className="absolute bottom-6 left-0 w-full text-center z-10">
-                                <h3 className="text-white text-[16px] sm:text-xl md:text-2xl font-bold tracking-wide drop-shadow-lg drop-shadow-cyan-500">{cat.title}</h3>
+                                <h3 className="text-white text-[16px] sm:text-xl md:text-2xl font-bold tracking-wide">{cat.title}</h3>
                             </div>
                         </div>
                     ))}
