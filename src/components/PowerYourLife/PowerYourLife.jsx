@@ -26,7 +26,7 @@ const PowerYourLife = () => {
                 <div className="w-full md:w-1/2 h-1/2 md:h-full flex flex-col justify-center items-center p-8 md:pl-16 text-center md:text-left bg-gray-200">
                     <h3 className="text-4xl font-bold text-gray-900 mb-4">On-The-Go Power</h3>
                     <p className="text-gray-600 font-medium mb-8">Stay charged all day, every day.</p>
-                    <button className="bg-cyan-400 text-black px-8 py-3 rounded-full font-bold flex items-center gap-2 hover:bg-cyan-300 active:bg-white active:text-cyan-500 transition-colors shadow-md">
+                    <button className="btn-primary text-black px-8 py-3 rounded-full font-bold flex items-center gap-2 active:bg-white active:text-cyan-500 transition-colors shadow-md">
                         Shop Power Banks
                         <div className="bg-white rounded-full p-1 ml-1 w-6 h-6 flex items-center justify-center">
                             <FaArrowRight className="text-xs text-black" />
@@ -41,7 +41,7 @@ const PowerYourLife = () => {
                 <div className="w-full md:w-1/2 h-1/2 md:h-full flex flex-col justify-center items-center p-8 md:pr-16 text-center md:text-right bg-gray-200 order-2 md:order-1">
                     <h3 className="text-4xl font-bold text-gray-900 mb-4">Immersive Sound</h3>
                     <p className="text-gray-600 font-medium mb-8">All-day comfort for calls, podcasts, and more.</p>
-                    <button className="bg-cyan-400 text-black px-8 py-3 rounded-full font-bold flex items-center gap-2 hover:bg-cyan-300 active:bg-white active:text-cyan-500 transition-colors shadow-md flex-row-reverse md:flex-row">
+                    <button className="btn-primary text-black px-8 py-3 rounded-full font-bold flex items-center gap-2  active:bg-white active:text-cyan-500 transition-colors shadow-md flex-row-reverse md:flex-row">
                         Shop Earbuds
                         <div className="bg-white rounded-full p-1 ml-1 w-6 h-6 flex items-center justify-center">
                             <FaArrowRight className="text-xs text-black -rotate-45" />

@@ -39,7 +39,7 @@ const Categories = () => {
                     ))}
                 </div>
 
-                <button className="flex items-center gap-3 bg-[#02D5E0] text-black px-3 py-2 sm:px-8 sm:py-3 lg:px-6 lg:py-5 lg:text-lg rounded-full font-bold hover:bg-cyan-300 transition-colors shadow-lg hover:shadow-cyan-400/50">
+                <button className="flex btn-primary items-center gap-3 text-black px-3 py-2 sm:px-8 sm:py-3 lg:px-6 lg:py-5 lg:text-lg rounded-full font-bold transition-colors shadow-lg hover:shadow-cyan-400/50">
                     View All Products
                     {/* <div className="bg-white rounded-full p-1.5 flex items-center justify-center">
                         <FaArrowRight className="w-[30px] h-[30px] text-black text-xs -rotate-45" />

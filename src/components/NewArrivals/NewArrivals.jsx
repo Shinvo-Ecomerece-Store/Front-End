@@ -75,7 +75,7 @@ const NewArrivals = () => {
                 ))}
             </div>
 
-            <button className="bg-cyan-400 text-black px-10 py-3 rounded-full font-bold hover:scale-105 transition-transform shadow-md">
+            <button className="btn-primary text-black px-10 py-3 rounded-full font-bold hover:scale-105 transition-transform shadow-md">
                 View All
             </button>
         </div>
