@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <div className="w-full max-h-[1380px] h-[650px] lg:h-[1000px] bg-img-custom bg-[url('../assets/images/bg.jpg')] bg-cover bg-center mx-auto flex flex-col relative overflow-hidden">
+    <div className="w-full max-h-[1380px] h-[600px] sm:h-[750px] lg:h-[1000px] bg-img-custom bg-[url('../assets/images/bg.jpg')] bg-cover bg-center mx-auto flex flex-col relative overflow-hidden">
       <Navbar />
 
       {/* Main Content Area - Relative for positioning */}
@@ -44,11 +44,11 @@ const Hero = () => {
 
         {/* --- Text Content --- */}
         {/* Mobile: Bottom Center. Desktop: Bottom Left */}
-        <div className="absolute bottom-40 w-full px-4 text-center lg:text-left lg:bottom-28 lg:left-20 lg:w-auto z-20">
-          <h1 className="text-4xl md:text-6xl lg:text-6xl xl:text-[70px] font-bold leading-tight mb-4 text-white">
+        <div className="absolute bottom-25 w-full px-4 text-center lg:text-left lg:bottom-35 lg:left-20 lg:w-auto z-20">
+          <h1 className="text-[28px] font-bold sm:text-4xl md:text-6xl lg:text-6xl xl:text-[70px] leading-tight mb-4 text-white">
             Elevate Your<br className="hidden lg:block" /> Everyday
           </h1>
-          <p className="text-[16px] md:text-[18px] lg:text-[20px] text-white font-[400] max-w-[600px] mx-auto lg:mx-0">
+          <p className="text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] text-white font-[400] max-w-[600px] mx-auto lg:mx-0">
             Smart accessories for a connected life. Shop Mobile Cases, Earbuds, Cables & More.
           </p>
         </div>
@@ -61,7 +61,6 @@ const Hero = () => {
             <Link to="/##"><BsArrowUpRight className="p-3 w-[35px] h-[35px] sm:w-[40px] sm:h-[40px] xl:p-4 xl:w-[50px] xl:h-[50px] rounded-full bg-white text-cta-cyan" /></Link>
           </div>
         </div>
-
       </div>
     </div>
   );
