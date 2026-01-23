@@ -17,7 +17,7 @@ const ShopBanner = ({ imgageShop, title }) => {
 
                 {/* Content */}
                 <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
-                    <h2 className="text-4xl md:text-5xl font-bold text-white mb-2 drop-shadow-md">
+                    <h2 className="text-2xl lg:text-5xl font-semibold lg:font-bold text-white mb-2 drop-shadow-md">
                         {title}
                     </h2>
                     {/* Optional google logo or subtitle if needed, keeping it simple for now as per design */}
