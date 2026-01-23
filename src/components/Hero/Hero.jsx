@@ -45,7 +45,7 @@ const Hero = () => {
         {/* --- Text Content --- */}
         {/* Mobile: Bottom Center. Desktop: Bottom Left */}
         <div className="absolute bottom-25 w-full px-4 text-center lg:text-left lg:bottom-35 lg:left-20 lg:w-auto z-20">
-          <h1 className="text-[28px] font-bold sm:text-4xl md:text-6xl lg:text-6xl xl:text-[70px] leading-tight mb-4 text-white">
+          <h1 className="max-[375px]:text-[26px] text-[28px] font-bold sm:text-4xl md:text-6xl lg:text-6xl xl:text-[70px] leading-tight mb-4 text-white">
             Elevate Your<br className="hidden lg:block" /> Everyday
           </h1>
           <p className="text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] text-white font-[400] max-w-[600px] mx-auto lg:mx-0">

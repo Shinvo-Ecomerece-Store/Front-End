@@ -14,17 +14,17 @@ const Categories = () => {
 
     return (
         <div className="w-full bg-white py-10">
-            <div className="max-w-[1920px] mx-auto px-6 flex flex-col items-center gap-16">
+            <div className="max-w-[1920px] mx-auto px-6 flex flex-col items-center gap-10">
 
                 <div className="text-center">
-                    <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight mb-0 sm:mb-10">
                         Find Accessories<br />For Your Device
                     </h2>
                 </div>
 
-                <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 w-full">
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 w-full">
                     {categories.map((cat) => (
-                        <div key={cat.id} className="relative w-full aspect-square rounded-[30px] lg:rounded-[100px] overflow-hidden group cursor-pointer shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <div key={cat.id} className="relative h-[100%] w-[100%] sm:h-[80%] sm:w-[98%] aspect-square rounded-[30px] sm:rounded-[60px] md:rounded-[90px] lg:rounded-[60px] 2xl:rounded-[100px] overflow-hidden group cursor-pointer shadow-lg hover:shadow-xl transition-shadow duration-300">
                             <div
                                 className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
                                 style={{ backgroundImage: `url(${cat.image})` }}
@@ -33,16 +33,16 @@ const Categories = () => {
                             <div className="absolute inset-x-0 bottom-0 h-full bg-gradient-to-t from-black to-transparent"></div>
 
                             <div className="absolute bottom-6 left-0 w-full text-center z-10">
-                                <h3 className="text-white text-xl md:text-2xl font-bold tracking-wide">{cat.title}</h3>
+                                <h3 className="text-white text-[16px] sm:text-xl md:text-2xl font-bold tracking-wide">{cat.title}</h3>
                             </div>
                         </div>
                     ))}
                 </div>
 
-                <button className="flex items-center gap-3 bg-[#02D5E0] text-black px-8 py-3 lg:px-12 lg:py-4 lg:text-lg rounded-full font-bold hover:bg-cyan-300 transition-colors shadow-lg hover:shadow-cyan-400/50">
+                <button className="flex items-center gap-3 bg-[#02D5E0] text-black px-3 py-2 sm:px-8 sm:py-3 lg:px-6 lg:py-2 lg:text-lg rounded-full font-bold hover:bg-cyan-300 transition-colors shadow-lg hover:shadow-cyan-400/50">
                     View All Products
                     <div className="bg-white rounded-full p-1.5 flex items-center justify-center">
-                        <FaArrowRight className="text-black text-xs -rotate-45" />
+                        <FaArrowRight className="w-[30px] h-[30px] text-black text-xs -rotate-45" />
                     </div>
                 </button>
 
