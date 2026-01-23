@@ -58,7 +58,7 @@ const Hero = () => {
         <div className="absolute bottom-10 lg:bottom-15 left-1/2 transform -translate-x-1/2 z-20">
           <div className="btn-primary xl:px-2 w-[150px] lg:h-[60px] h-[50px] sm:w-[180px] sm:h-[50px] xl:w-[230px] xl:h-[70px] flex items-center justify-center gap-4 rounded-full text-[14px] sm:text-[18px] xl:text-[24px] text-black font-semibold cursor-pointer hover:scale-105 transition-transform">
             Shop Now
-            <Link to="/##"><BsArrowUpRight className="p-3 w-[35px] h-[35px] sm:w-[40px] sm:h-[40px] xl:p-4 xl:w-[50px] xl:h-[50px] rounded-full bg-white text-cta-cyan" /></Link>
+            {/* <Link to="/##"><BsArrowUpRight className="p-3 w-[35px] h-[35px] sm:w-[40px] sm:h-[40px] xl:p-4 xl:w-[50px] xl:h-[50px] rounded-full bg-white text-cta-cyan" /></Link> */}
           </div>
         </div>
       </div>

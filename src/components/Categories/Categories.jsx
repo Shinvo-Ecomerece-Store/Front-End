@@ -33,17 +33,17 @@ const Categories = () => {
                             <div className="absolute inset-x-0 bottom-0 h-full bg-gradient-to-t from-black to-transparent"></div>
 
                             <div className="absolute bottom-6 left-0 w-full text-center z-10">
-                                <h3 className="text-white text-[16px] sm:text-xl md:text-2xl font-bold tracking-wide">{cat.title}</h3>
+                                <h3 className="text-white text-[16px] sm:text-xl md:text-2xl font-bold tracking-wide drop-shadow-lg drop-shadow-cyan-500">{cat.title}</h3>
                             </div>
                         </div>
                     ))}
                 </div>
 
-                <button className="flex items-center gap-3 bg-[#02D5E0] text-black px-3 py-2 sm:px-8 sm:py-3 lg:px-6 lg:py-2 lg:text-lg rounded-full font-bold hover:bg-cyan-300 transition-colors shadow-lg hover:shadow-cyan-400/50">
+                <button className="flex items-center gap-3 bg-[#02D5E0] text-black px-3 py-2 sm:px-8 sm:py-3 lg:px-6 lg:py-5 lg:text-lg rounded-full font-bold hover:bg-cyan-300 transition-colors shadow-lg hover:shadow-cyan-400/50">
                     View All Products
-                    <div className="bg-white rounded-full p-1.5 flex items-center justify-center">
+                    {/* <div className="bg-white rounded-full p-1.5 flex items-center justify-center">
                         <FaArrowRight className="w-[30px] h-[30px] text-black text-xs -rotate-45" />
-                    </div>
+                    </div> */}
                 </button>
 
             </div>

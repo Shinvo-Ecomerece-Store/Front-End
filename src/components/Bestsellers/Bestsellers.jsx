@@ -48,7 +48,7 @@ const Bestsellers = () => {
     };
 
     return (
-        <div className="w-full max-w-[1920px] mx-auto py-10 flex flex-col items-center bg-white overflow-hidden">
+        <div className="w-full max-w-[1920px] mx-auto pb-10 flex flex-col items-center bg-white overflow-hidden">
             <h2 className="text-4xl font-bold text-gray-900 mb-12">Our Bestsellers</h2>
 
             <div className="relative w-full max-w-[1920px] h-[500px] min-[1300px]:h-[700px] flex items-center justify-center">
@@ -63,11 +63,11 @@ const Bestsellers = () => {
                     let className = "absolute transition-all duration-500 ease-in-out flex flex-col items-center rounded-3xl p-6 shadow-xl ";
 
                     if (isCenter) {
-                        className += "z-20 w-[350px] min-[430px]:w-[400px] min-[1300px]:w-[600px] h-[500px] min-[1300px]:h-[700px] bg-gradient-to-b from-cyan-100 to-cyan-400 scale-100 opacity-100";
+                        className += "z-20 w-[300px] min-[370px]:w-[320px] min-[430px]:w-[400px] min-[1300px]:w-[600px] h-[500px] min-[1300px]:h-[700px] bg-gradient-to-b from-cyan-100 to-cyan-400 scale-100 opacity-100";
                     } else if (isLeft) {
-                        className += "z-10 w-[350px] min-[1300px]:w-[450px] h-[400px] min-[1300px]:h-[550px] bg-cyan-50 -translate-x-[350px] min-[1300px]:-translate-x-[500px] scale-90 opacity-80 blur-[1px]";
+                        className += "z-10 w-[300px] min-[370px]:w-[350px] h-[400px] min-[1300px]:h-[550px] bg-cyan-50 min-[1300px]:w-[600px] -translate-x-[250px] sm:-translate-x-[350px] min-[1300px]:-translate-x-[500px] scale-90 opacity-80 blur-[1px]";
                     } else if (isRight) {
-                        className += "z-10 w-[350px] min-[1300px]:w-[450px] h-[400px] min-[1300px]:h-[550px] bg-cyan-50 translate-x-[350px] min-[1300px]:translate-x-[500px] scale-90 opacity-80 blur-[1px]";
+                        className += "z-10 w-[300px] min-[370px]:w-[350px] h-[400px] min-[1300px]:h-[550px] bg-cyan-50 min-[1300px]:w-[600px] translate-x-[250px] sm:translate-x-[350px] min-[1300px]:translate-x-[500px] scale-90 opacity-80 blur-[1px]";
                     } else {
                         className += "hidden";
                     }
@@ -112,29 +112,34 @@ const Bestsellers = () => {
 
                             {/* View Details Button (Only on Center) */}
                             {isCenter && (
-                                <button className="absolute -bottom-5 bg-black text-white px-8 py-2 rounded-full font-medium shadow-lg hover:scale-105 transition-transform flex items-center gap-2">
-                                    View details
-                                </button>
+                                <div className=" w-full flex justify-between px-4 items-center gap-4 z-40">
+                                    {/* Prev Button */}
+                                    <button
+                                        onClick={(e) => { e.stopPropagation(); prevSlide(); }}
+                                        className="bg-white p-4 absolute bottom-[45%] left-[-20px] rounded-full shadow-lg text-cyan-500 hover:bg-[#046E73] hover:text-white transition-all transform hover:scale-110"
+                                    >
+                                        <FaChevronLeft size={20} />
+                                    </button>
+
+                                    <button className="bg-black hover:bg-white relative bottom-[-40px] left-1/2 -translate-x-1/2 text-white hover:text-cyan-500 px-6 py-3 rounded-full font-medium shadow-lg hover:scale-105 transition-transform flex items-center gap-2 text-sm sm:text-base whitespace-nowrap">
+                                        View details
+                                    </button>
+
+                                    {/* Next Button */}
+                                    <button
+                                        onClick={(e) => { e.stopPropagation(); nextSlide(); }}
+                                        className="bg-white p-4 absolute bottom-[45%] right-[-20px] rounded-full shadow-lg text-cyan-500 hover:bg-[#046E73] hover:text-white transition-all transform hover:scale-110"
+                                    >
+                                        <FaChevronRight size={20} />
+                                    </button>
+                                </div>
                             )}
                         </div>
                     );
                 })}
 
-                {/* Navigation Arrows */}
-                <button
-                    onClick={prevSlide}
-                    className="absolute left-[10%] sm:left-[20%] z-30 bg-white p-3 rounded-full shadow-lg text-cyan-500 hover:bg-gray-50 transition-colors"
-                >
-                    <FaChevronLeft size={24} />
-                </button>
-                <button
-                    onClick={nextSlide}
-                    className="absolute right-[10%] sm:right-[20%] z-30 bg-white p-3 rounded-full shadow-lg text-cyan-500 hover:bg-gray-50 transition-colors"
-                >
-                    <FaChevronRight size={24} />
-                </button>
-
             </div>
+
         </div>
     );
 };
