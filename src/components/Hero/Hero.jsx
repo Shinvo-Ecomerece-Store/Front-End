@@ -33,12 +33,12 @@ const Hero = () => {
 
         {/* Left Card - Watch (Mid Left) */}
         <div className="hidden lg:flex absolute top-[18%] left-20 w-[200px] h-[200px] xl:w-[230px] xl:h-[230px] rounded-[40px] shadow-hard-card bg-img-custom bg-[url('../assets/images/products/hero1.png')] bg-cover bg-center items-center justify-center z-10 animate-float">
-          <Link to="/##"><BsArrowUpRight className="p-4 w-[70px] h-[60px] xl:w-[82px] xl:h-[72px] rounded-full bg-white text-cta-cyan hover:bg-[#02D5E0] hover:shadow-[#09D8DF] shadow-4xl hover:text-white transition-colors" /></Link>
+          <Link to="/##"><BsArrowUpRight className="p-4 w-[50px] h-[50px] xl:w-[60px] xl:h-[60px] rounded-full bg-white text-cta-cyan hover:bg-[#02D5E0] hover:shadow-[#09D8DF] shadow-4xl hover:text-white transition-colors" /></Link>
         </div>
 
         {/* Right Card - Phone (Bottom Right) */}
-        <div className="hidden lg:flex absolute bottom-40 right-10 xl:right-20 w-[200px] h-[200px] xl:w-[230px] xl:h-[230px] rounded-[40px] shadow-hard-card bg-img-custom bg-[url('../assets/images/products/hero1.png')] bg-cover bg-center items-center justify-center z-10 animate-float-delayed rotate-[20deg]">
-          <Link to="/##"><BsArrowUpRight className="p-4 w-[70px] h-[60px] xl:w-[82px] xl:h-[72px] rounded-full bg-white text-cta-cyan hover:bg-[#02D5E0] shadow-[#09D8DF] shadow-4xl hover:text-white transition-colors" /></Link>
+        <div className="hidden lg:flex absolute bottom-40 right-10 xl:right-20 w-[200px] h-[200px] xl:w-[230px] xl:h-[230px] rounded-[40px] shadow-hard-card bg-img-custom bg-[url('../assets/images/products/hero2.png')] bg-cover bg-center items-center justify-center z-10 animate-float-delayed rotate-[20deg]">
+          <Link to="/##"><BsArrowUpRight className="p-4 w-[50px] h-[50px] xl:w-[60px] xl:h-[60px] rounded-full bg-white text-cta-cyan hover:bg-[#02D5E0] shadow-[#09D8DF] shadow-4xl hover:text-white transition-colors" /></Link>
         </div>
 
 
@@ -58,7 +58,7 @@ const Hero = () => {
         <div className="absolute bottom-10 lg:bottom-15 left-1/2 transform -translate-x-1/2 z-20">
           <div className="btn-primary xl:px-2 w-[150px] lg:h-[60px] h-[50px] sm:w-[180px] sm:h-[50px] xl:w-[230px] xl:h-[70px] flex items-center justify-center gap-4 rounded-full text-[14px] sm:text-[18px] xl:text-[24px] text-black font-semibold cursor-pointer hover:scale-105 transition-transform">
             Shop Now
-            <Link to="/##"><BsArrowUpRight className="p-3 w-[40px] h-[35px] sm:w-[50px] sm:h-[40px] xl:p-4 xl:w-[69px] xl:h-[56px] rounded-full bg-white text-cta-cyan" /></Link>
+            <Link to="/##"><BsArrowUpRight className="p-3 w-[35px] h-[35px] sm:w-[40px] sm:h-[40px] xl:p-4 xl:w-[50px] xl:h-[50px] rounded-full bg-white text-cta-cyan" /></Link>
           </div>
         </div>
 

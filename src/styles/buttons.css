@@ -6,7 +6,8 @@
   @apply bg-(--color-cyan) text-white;
 
   &:hover {
-    @apply bg-(--color-dark-cyan);
+    @apply bg-[#046E73];
+    @apply text-white;
   }
 }
 
