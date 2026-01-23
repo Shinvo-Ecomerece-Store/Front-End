@@ -45,7 +45,7 @@ const NewArrivals = () => {
                 {products.map((product) => (
                     <div
                         key={product.id}
-                        className="group relative bg-gray-50 rounded-3xl p-6 shadow-sm hover:shadow-xl transition-shadow duration-300 flex flex-col border border-gray-100"
+                        className="group relative bg-gray-50 rounded-3xl p-3 shadow-sm hover:shadow-xl transition-shadow duration-300 flex flex-col border border-gray-100"
                     >
                         {/* New Badge */}
                         {product.isNew && (
@@ -55,7 +55,7 @@ const NewArrivals = () => {
                         )}
 
                         {/* Image Container */}
-                        <div className="w-full aspect-square flex items-center justify-center mb-6 bg-gray-100 rounded-2xl overflow-hidden relative">
+                        <div className="w-full aspect-square flex items-center justify-center mb-6 bg-[#C6C7C8] rounded-2xl overflow-hidden relative">
                             <img
                                 src={product.image}
                                 alt={product.name}

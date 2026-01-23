@@ -1,7 +1,7 @@
 
 const ShopBanner = ({ imgageShop, title }) => {
     return (
-        <div className="w-full mx-auto px-4 py-8 flex justify-center">
+        <div className="w-full mx-auto px-4 py-2 flex justify-center">
             <div
                 className="relative w-full max-w-[1920px] h-[200px] lg:h-[300px] xl:h-[400px] rounded-[30px] overflow-hidden shadow-lg group"
             >
