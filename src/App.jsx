@@ -5,6 +5,8 @@ import About from "./pages/About"
 import Loader from "./components/Loader/Loader"
 import NotFound from "./pages/NotFound"
 
+import ProductPage from "./pages/ProductPage"
+
 function App() {
 
   const [loading, setLoading] = useState(true);
@@ -26,6 +28,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/categories" element={<ProductPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>

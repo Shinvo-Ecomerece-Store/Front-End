@@ -1,11 +1,19 @@
 import React, { useState } from 'react';
-import { FiSearch, FiUser, FiShoppingCart, FiMenu, FiX } from "react-icons/fi";
+import { FiSearch, FiUser, FiShoppingCart, FiMenu, FiX, FiChevronDown, FiChevronUp } from "react-icons/fi";
 import { Link } from 'react-router-dom';
 import UpperNavbar from './UpperNavbar';
-import { IoSearch } from "react-icons/io5";
+import CategoryDropdown from './CategoryDropdown';
+import { categoryData } from './categoryData';
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [mobileCategoryOpen, setMobileCategoryOpen] = useState(false);
+
+  // Toggle Dropdown
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
 
   return (
     <div className="top-0 left-0 z-50 fixed w-full px-4">
@@ -31,16 +39,22 @@ function Navbar() {
               </Link>
             </div>
 
-            {/* Mobile Menu Toggle */}
-            {/* <IoSearch className="text-white/70 text-lg" /> */}
+            {/* Mobile Icons */}
             <FiShoppingCart className="text-2xl md:hidden" color='white' />
           </div>
 
           {/* CENTER: Navigation (Desktop) */}
-          <div className="hidden md:flex items-center gap-8 text-[18px] font-[400]">
+          <div className="hidden md:flex items-center gap-8 text-[18px] font-[400] relative">
             <Link to="/" className="text-white/90 hover:text-[#53C1CC] transition-colors">Home</Link>
             <Link to="/about" className="text-white/90 hover:text-[#53C1CC] transition-colors">About Us</Link>
-            <Link to="/categories" className="text-white/90 hover:text-[#53C1CC] transition-colors">Categories</Link>
+
+            {/* Categories Dropdown Trigger */}
+            <button
+              onClick={toggleDropdown}
+              className={`text-white/90 hover:text-[#53C1CC] transition-colors flex items-center gap-1 focus:outline-none ${isDropdownOpen ? 'text-[#53C1CC]' : ''}`}
+            >
+              Categories <FiChevronDown className={`transition-transform duration-300 ${isDropdownOpen ? 'rotate-180' : ''}`} />
+            </button>
           </div>
 
           {/* RIGHT: Search + Icons (Desktop) */}
@@ -63,15 +77,55 @@ function Navbar() {
 
         </nav>
 
+        {/* Desktop Dropdown Component */}
+        <div className="hidden md:block">
+          <CategoryDropdown
+            data={categoryData}
+            isOpen={isDropdownOpen}
+            onClose={() => setIsDropdownOpen(false)}
+          />
+        </div>
+
         {/* Mobile Menu (Dropdown) */}
         {isOpen && (
-          <div className="md:hidden absolute top-full left-0 w-full mt-2 bg-black/90 backdrop-blur-xl rounded-[20px] p-6 flex flex-col gap-6 border border-white/10 shadow-2xl z-40 animate-fade-in">
+          <div className="md:hidden absolute top-full left-0 w-full mt-2 bg-black/90 backdrop-blur-xl rounded-[20px] p-6 flex flex-col gap-6 border border-white/10 shadow-2xl z-40 animate-fade-in max-h-[80vh] overflow-y-auto">
 
             {/* Mobile Links */}
-            <div className="flex flex-col gap-4 text-center text-lg">
-              <Link to="/" className="text-white hover:text-[#53C1CC] transition-colors" onClick={() => setIsOpen(false)}>Home</Link>
-              <Link to="/about" className="text-white hover:text-[#53C1CC] transition-colors" onClick={() => setIsOpen(false)}>About Us</Link>
-              <Link to="/categories" className="text-white hover:text-[#53C1CC] transition-colors" onClick={() => setIsOpen(false)}>Categories</Link>
+            <div className="flex flex-col gap-4 text-center text-lg text-white">
+              <Link to="/" className="hover:text-[#53C1CC] transition-colors border-b border-white/10 pb-2" onClick={() => setIsOpen(false)}>Home</Link>
+              <Link to="/about" className="hover:text-[#53C1CC] transition-colors border-b border-white/10 pb-2" onClick={() => setIsOpen(false)}>About Us</Link>
+
+              {/* Mobile Categories Accordion */}
+              <div>
+                <button
+                  onClick={() => setMobileCategoryOpen(!mobileCategoryOpen)}
+                  className="w-full flex items-center justify-center gap-2 hover:text-[#53C1CC] transition-colors pb-2"
+                >
+                  Categories <FiChevronDown className={`transition-transform duration-300 ${mobileCategoryOpen ? 'rotate-180' : ''}`} />
+                </button>
+
+                {mobileCategoryOpen && (
+                  <div className="bg-white/5 rounded-xl p-4 mt-2 flex flex-col gap-4 text-left text-base">
+                    {Object.entries(categoryData).map(([category, items]) => (
+                      <div key={category}>
+                        <h4 className="text-[#53C1CC] font-bold mb-2 uppercase text-sm">{category}</h4>
+                        <div className="flex flex-col gap-2 pl-2 border-l border-white/10">
+                          {items.map(item => (
+                            <Link
+                              key={item}
+                              to="/categories"
+                              className="text-gray-300 text-sm hover:text-white"
+                              onClick={() => setIsOpen(false)}
+                            >
+                              {item}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
             </div>
 
             {/* Mobile Search */}

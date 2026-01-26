@@ -24,7 +24,7 @@ const NotFound = () => {
                 {/* Button */}
                 <Link
                     to="/"
-                    className="group relative inline-flex items-center gap-2 px-8 py-3 bg-black text-white rounded-full font-medium overflow-hidden transition-all hover:w-[180px] hover:justify-center w-[160px] justify-center"
+                    className="group relative inline-flex items-center gap-2 px-8 py-3 bg-black text-white rounded-full font-medium overflow-hidden transition-all hover:justify-center w-[180px] justify-center"
                 >
                     <span className="absolute inset-0 w-full h-full bg-cyan-400/10 group-hover:bg-cyan-400/20 transition-colors"></span>
                     <FaHome className="text-sm" />
