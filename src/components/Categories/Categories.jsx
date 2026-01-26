@@ -24,7 +24,7 @@ const Categories = () => {
 
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 w-full">
                     {categories.map((cat) => (
-                        <div key={cat.id} className="relative h-[100%] w-[100%] sm:h-[80%] sm:w-[98%] aspect-square rounded-[30px] sm:rounded-[60px] md:rounded-[90px] lg:rounded-[60px] 2xl:rounded-[100px] overflow-hidden group cursor-pointer shadow-lg hover:shadow-xl transition-shadow duration-300 shadow-lg shadow-cyan-500">
+                        <div key={cat.id} className="relative h-[100%] w-[100%] sm:h-[80%] sm:w-[98%] aspect-square rounded-[30px] sm:rounded-[60px] md:rounded-[90px] lg:rounded-[60px] 2xl:rounded-[100px] overflow-hidden group cursor-pointer shadow-lg hover:shadow-xl transition-shadow duration-300 shadow-lg shadow-black">
                             <div
                                 className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
                                 style={{ backgroundImage: `url(${cat.image})` }}

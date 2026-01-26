@@ -3,7 +3,7 @@ import missionImg from '../../assets/mission_lifestyle.png';
 
 const Mission = () => {
     return (
-        <div className="w-full bg-gray-50 py-12 md:py-20 overflow-hidden">
+        <div className="w-full bg-gray-50 py-12 md:py-25 overflow-hidden">
             <div className="max-w-7xl mx-auto px-6">
                 <h2 className="text-3xl md:text-5xl font-bold text-center mb-10 md:mb-16">The Mission</h2>
 

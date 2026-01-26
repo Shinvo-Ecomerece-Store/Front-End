@@ -65,7 +65,7 @@ const Footer = () => {
                                 placeholder="Email Address"
                                 className="bg-transparent px-4 text-gray-800 placeholder-gray-600 outline-none w-full h-full"
                             />
-                            <button className="bg-cyan-400 h-full w-14 flex items-center justify-center text-black hover:bg-cyan-300 transition-colors">
+                            <button className="bg-cyan-400 h-full w-14 flex items-center justify-center text-black hover:bg-[#046E73] transition-colors">
                                 <FaPaperPlane className="transform -rotate-12" />
                             </button>
                         </div>
