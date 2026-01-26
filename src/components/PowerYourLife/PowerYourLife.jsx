@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaArrowRight } from 'react-icons/fa6';
-import powerbankImg from '../../assets/powerbank_lifestyle.png';
-import earbudsImg from '../../assets/earbuds_lifestyle.png';
+import powerbankImg from '../../assets/images/rec1.png';
+import earbudsImg from '../../assets/images/rec2.png';
 
 const PowerYourLife = () => {
     return (
@@ -19,7 +19,7 @@ const PowerYourLife = () => {
                     />
                     {/* Gradient Overlay for better integration */}
                     {/* Gradient Overlay for better integration */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#02D5E0]/70 to-transparent mix-blend-multiply"></div>
+                    {/* <div className="absolute inset-0 bg-gradient-to-t from-[#02D5E0]/70 to-transparent mix-blend-multiply"></div> */}
                 </div>
 
                 {/* Text Section (Right) */}
