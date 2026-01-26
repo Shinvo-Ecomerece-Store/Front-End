@@ -17,7 +17,7 @@ const CategoryDropdown = ({ data, isOpen, onClose }) => {
             <div className="max-w-7xl mx-auto flex flex-wrap justify-between gap-8">
 
                 {/* Column 1 */}
-                <div className="flex flex-col gap-8 w-[20%]">
+                <div className="flex flex-col gap-8 w-[18%]">
                     <div>
                         <h3 className="font-bold text-lg mb-4 uppercase tracking-wider">Charger & Adapter</h3>
                         <ul className="flex flex-col gap-2 text-gray-600">
@@ -37,7 +37,7 @@ const CategoryDropdown = ({ data, isOpen, onClose }) => {
                 </div>
 
                 {/* Column 2 */}
-                <div className="flex flex-col gap-8 w-[20%]">
+                <div className="flex flex-col gap-8 w-[17%]">
                     <div>
                         <h3 className="font-bold text-lg mb-4 uppercase tracking-wider">Protection</h3>
                         <ul className="flex flex-col gap-2 text-gray-600">
@@ -57,7 +57,7 @@ const CategoryDropdown = ({ data, isOpen, onClose }) => {
                 </div>
 
                 {/* Column 3 - Brands */}
-                <div className="w-[15%]">
+                <div className="w-[30%] xl:w-[20%]">
                     <h3 className="font-bold text-lg mb-4 uppercase tracking-wider">Shop By Brands</h3>
                     <ul className="flex flex-col gap-2 text-gray-600">
                         {data["Shop By Brands"].map((item) => (
@@ -78,13 +78,15 @@ const CategoryDropdown = ({ data, isOpen, onClose }) => {
                 {/* Recreating the specific card look from image: White box on left, Black on right with Watch */}
                 {/* <div className="absolute top-0 right-0 w-[40%] h-full bg-black z-0"></div> */}
                 {/* <div className="absolute top-0 left-0 w-[60%] h-full bg-white rounded-r-[50px] z-0"></div> */}
-                <div className="w-[40%] xl:w-[35%] object-contain cursor-pointer rounded-[30px] drop-shadow-2xl drop-shadow-[0_0_10px_rgba(0,0,0,0.7)]">
+                <div className="w-[40%] mx-auto xl:mx-0 flex flex-col gap-5 xl:w-[35%] object-contain cursor-pointer rounded-[30px] drop-shadow-2xl drop-shadow-[0_0_10px_rgba(0,0,0,0.7)]">
                     <img
                         src={smartwatchImg}
                         alt="Smartwatch"
                         className="w-full object-contain cursor-pointer rounded-[30px]"
                     />
+                    <span className="text-center text-gray-400 font-medium">Shop Now</span>
                 </div>
+
                 {/* <div className="absolute bottom-8 left-10 z-10">
                         <span className="text-gray-400 text-sm block mb-1">New Arrival</span>
                         <span className="text-black font-bold text-xl">Smart Watch</span>
