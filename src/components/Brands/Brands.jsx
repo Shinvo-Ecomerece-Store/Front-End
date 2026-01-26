@@ -3,7 +3,7 @@ import { SiSamsung, SiApple, SiGoogle } from "react-icons/si";
 
 const Brands = () => {
     const brands = [
-        { id: 1, icon: <SiSamsung className="text-3xl md:text-4xl text-blue-700" />, name: "SAMSUNG" },
+        { id: 1, icon: <SiSamsung className="text-3xl md:text-4xl text-blue-700" size={100} />, name: "SAMSUNG" },
         { id: 2, icon: <SiGoogle className="text-3xl md:text-4xl text-red-500" />, name: "Pixel" },
         { id: 3, icon: <SiApple className="text-3xl md:text-4xl text-black" />, name: "Apple" },
         { id: 4, icon: <span className="text-2xl md:text-3xl font-bold text-green-600">UGREEN</span>, name: "UGREEN" },
@@ -25,7 +25,7 @@ const Brands = () => {
                 {/* First Set of Brands */}
                 <div className="flex items-center gap-16 md:gap-24 px-8 md:px-12 shrink-0">
                     {brands.map((brand) => (
-                        <div key={brand.id} className="flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity duration-300 grayscale hover:grayscale-0 cursor-pointer">
+                        <div key={brand.id} className="flex items-center justify-center cursor-pointer">
                             {brand.icon}
                         </div>
                     ))}
@@ -34,7 +34,7 @@ const Brands = () => {
                 {/* Second Set of Brands (Duplicate for Loop) */}
                 <div className="flex items-center gap-16 md:gap-24 px-8 md:px-12 shrink-0">
                     {brands.map((brand) => (
-                        <div key={`dup-${brand.id}`} className="flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity duration-300 grayscale hover:grayscale-0 cursor-pointer">
+                        <div key={`dup-${brand.id}`} className="flex items-center justify-center cursor-pointer">
                             {brand.icon}
                         </div>
                     ))}
