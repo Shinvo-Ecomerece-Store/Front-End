@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import smartwatchImg from '../../assets/smartwatch.png';
 
 const products = [
@@ -43,7 +44,8 @@ const NewArrivals = () => {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-4 max-w-[1920px] mx-auto">
                 {products.map((product) => (
-                    <div
+                    <Link
+                        to={`/product/${product.id}`}
                         key={product.id}
                         className="group relative bg-gray-50 rounded-3xl p-3 shadow-sm hover:shadow-xl transition-shadow duration-300 flex flex-col border border-gray-100"
                     >
@@ -71,7 +73,7 @@ const NewArrivals = () => {
                             </h3>
                             <span className="text-black font-bold text-lg">{product.price}</span>
                         </div>
-                    </div>
+                    </Link>
                 ))}
             </div>
 

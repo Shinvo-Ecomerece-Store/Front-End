@@ -6,6 +6,7 @@ import ProductPage from './pages/ProductPage';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import NotFound from "./pages/NotFound";
+import ProductDetails from './pages/ProductDetails';
 import { AuthProvider } from './context/AuthContext';
 
 
@@ -21,6 +22,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/shop" element={<ProductPage />} />
+          <Route path="/product/:id" element={<ProductDetails />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="*" element={<NotFound />} />

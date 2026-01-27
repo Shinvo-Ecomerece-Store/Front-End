@@ -150,13 +150,36 @@ function Navbar() {
             </div>
 
             {/* Mobile Icons */}
-            <div className="flex justify-center gap-8 border-t border-white/10 pt-4">
-              <button className="text-white hover:text-[#53C1CC] transition-transform hover:scale-110">
-                <FiUser className="text-2xl" />
-              </button>
-              <button className="relative text-white hover:text-[#53C1CC] transition-transform hover:scale-110">
-                <span className="absolute -top-1 -right-2 bg-[#53C1CC] text-white text-[10px] font-bold w-4 h-4 flex items-center justify-center rounded-full">2</span>
-              </button>
+            {/* Mobile Auth / Icons */}
+            <div className="flex justify-center gap-8 border-t border-white/10 pt-6">
+              {isLoggedIn ? (
+                <>
+                  <button className="text-white hover:text-[#53C1CC] transition-transform hover:scale-110">
+                    <FiUser className="text-2xl" />
+                  </button>
+                  <button className="relative text-white hover:text-[#53C1CC] transition-transform hover:scale-110">
+                    <span className="absolute -top-1 -right-2 bg-[#53C1CC] text-white text-[10px] font-bold w-4 h-4 flex items-center justify-center rounded-full">2</span>
+                    <FiShoppingCart className="text-2xl" />
+                  </button>
+                </>
+              ) : (
+                <div className="flex flex-col w-full gap-3 px-4">
+                  <Link
+                    to="/login"
+                    className="w-full text-center text-white border border-white/20 py-2 rounded-full hover:border-[#53C1CC] hover:text-[#53C1CC] transition-colors"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Login
+                  </Link>
+                  <Link
+                    to="/register"
+                    className="w-full text-center bg-[#53C1CC] text-white py-2 rounded-full hover:bg-[#43aab5] transition-colors font-medium"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Sign Up
+                  </Link>
+                </div>
+              )}
             </div>
 
           </div>

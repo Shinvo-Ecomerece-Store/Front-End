@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { FaChevronLeft, FaChevronRight, FaLock, FaShoppingBag } from 'react-icons/fa';
 import chargerImg from '../../assets/bestsellers/charger.png';
 import caseImg from '../../assets/bestsellers/case.png';
@@ -121,9 +122,9 @@ const Bestsellers = () => {
                                         <FaChevronLeft size={20} />
                                     </button>
 
-                                    <button className="bg-black hover:bg-white relative bottom-[-40px] left-1/2 -translate-x-1/2 text-white hover:text-cyan-500 px-6 py-3 rounded-full font-medium shadow-lg hover:scale-105 transition-transform flex items-center gap-2 text-sm sm:text-base whitespace-nowrap">
+                                    <Link to={`/product/${product.id}`} className="bg-black hover:bg-white relative bottom-[-40px] left-1/2 -translate-x-1/2 text-white hover:text-cyan-500 px-6 py-3 rounded-full font-medium shadow-lg hover:scale-105 transition-transform flex items-center gap-2 text-sm sm:text-base whitespace-nowrap">
                                         View details
-                                    </button>
+                                    </Link>
 
                                     {/* Next Button */}
                                     <button
