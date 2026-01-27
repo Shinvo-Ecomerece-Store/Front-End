@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer/Footer';
 import ShopHero from '../components/Shop/ShopHero';
+import ChooseDevice from '../components/Shop/ChooseDevice';
 import Categories from '../components/Categories/Categories';
 import Bestsellers from '../components/Bestsellers/Bestsellers';
 
@@ -11,10 +12,11 @@ const ProductPage = () => {
             <Navbar />
             <div className="mt-[100px]"> {/* Add margin to account for fixed navbar */}
                 <ShopHero />
-                <div className="py-10">
+                <ChooseDevice />
+                {/* <div className="py-10">
                     <Categories />
                 </div>
-                <Bestsellers />
+                <Bestsellers /> */}
             </div>
             <Footer />
         </div>
