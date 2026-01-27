@@ -1,38 +1,33 @@
-import { Routes, Route } from 'react-router-dom'
-import { useState, useEffect } from 'react'
-import Home from "./pages/Home"
-import About from "./pages/About"
-import Loader from "./components/Loader/Loader"
-import NotFound from "./pages/NotFound"
+import { Routes, Route, useLocation } from 'react-router-dom';
+import Navbar from './components/Navbar/Navbar';
+import Home from './pages/Home';
+import About from './pages/About';
+import ProductPage from './pages/ProductPage';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import NotFound from "./pages/NotFound";
+import { AuthProvider } from './context/AuthContext';
 
-import ProductPage from "./pages/ProductPage"
 
 function App() {
-
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    // Simulate loading time
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 2000);
-    return () => clearTimeout(timer);
-  }, []);
-
-  if (loading) {
-    return <Loader />;
-  }
+  const location = useLocation();
+  const hideNavbar = location.pathname === '/login' || location.pathname === '/register';
 
   return (
-    <>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/categories" element={<ProductPage />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </>
-  )
+    <AuthProvider>
+      <div className="font-outfit">
+        {!hideNavbar && <Navbar />}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/shop" element={<ProductPage />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </div>
+    </AuthProvider>
+  );
 }
 
-export default App
+export default App;

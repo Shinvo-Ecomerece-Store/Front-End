@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useAuth } from '../../context/AuthContext';
 import { FiSearch, FiUser, FiShoppingCart, FiMenu, FiX, FiChevronDown, FiChevronUp } from "react-icons/fi";
 import { Link } from 'react-router-dom';
 import UpperNavbar from './UpperNavbar';
@@ -6,6 +7,7 @@ import CategoryDropdown from './CategoryDropdown';
 import { categoryData } from './categoryData';
 
 function Navbar() {
+  const { isLoggedIn } = useAuth();
   const [isOpen, setIsOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [mobileCategoryOpen, setMobileCategoryOpen] = useState(false);
@@ -51,9 +53,9 @@ function Navbar() {
             {/* Categories Dropdown Trigger */}
             <button
               onClick={toggleDropdown}
-              className={`text-white/90 hover:text-[#53C1CC] transition-colors flex items-center gap-1 focus:outline-none ${isDropdownOpen ? 'text-[#53C1CC]' : ''}`}
+              className={`text-white/90 hover:text-[#53C1CC] transition-colors flex items-center gap-1 focus:outline-none ${isDropdownOpen ? 'text-[#53C1CC]' : ''} `}
             >
-              Categories <FiChevronDown className={`transition-transform duration-300 ${isDropdownOpen ? 'rotate-180' : ''}`} />
+              Categories <FiChevronDown className={`transition - transform duration - 300 ${isDropdownOpen ? 'rotate-180' : ''} `} />
             </button>
           </div>
 
@@ -65,13 +67,26 @@ function Navbar() {
             </div>
 
             <div className="flex items-center gap-3 border-l border-white/20 pl-4">
-              <button className="text-white hover:text-[#53C1CC] transition-transform hover:scale-110">
-                <FiUser className="text-xl w-[32px] h-[32px]" />
-              </button>
-              <button className="relative text-white hover:text-[#53C1CC] transition-transform hover:scale-110">
-                <FiShoppingCart className="text-xl w-[32px] h-[32px]" />
-                <span className="absolute -top-1 -right-1 bg-[#53C1CC] text-white text-[9px] font-bold w-3 h-3 flex items-center justify-center rounded-full">2</span>
-              </button>
+              {isLoggedIn ? (
+                <>
+                  <button className="text-white hover:text-[#53C1CC] transition-transform hover:scale-110">
+                    <FiUser className="text-xl w-[32px] h-[32px]" />
+                  </button>
+                  <button className="relative text-white hover:text-[#53C1CC] transition-transform hover:scale-110">
+                    <FiShoppingCart className="text-xl w-[32px] h-[32px]" />
+                    <span className="absolute -top-1 -right-1 bg-[#53C1CC] text-white text-[9px] font-bold w-3 h-3 flex items-center justify-center rounded-full">2</span>
+                  </button>
+                </>
+              ) : (
+                <div className="flex items-center gap-4">
+                  <Link to="/login" className="text-white hover:text-[#53C1CC] font-medium transition-colors">
+                    Login
+                  </Link>
+                  <Link to="/register" className="bg-[#53C1CC] hover:bg-[#43aab5] text-white px-5 py-2 rounded-full font-medium transition-colors">
+                    Sign Up
+                  </Link>
+                </div>
+              )}
             </div>
           </div>
 
@@ -113,7 +128,7 @@ function Navbar() {
                           {items.map(item => (
                             <Link
                               key={item}
-                              to="/categories"
+                              to="/shop"
                               className="text-gray-300 text-sm hover:text-white"
                               onClick={() => setIsOpen(false)}
                             >

@@ -22,7 +22,7 @@ const CategoryDropdown = ({ data, isOpen, onClose }) => {
                         <h3 className="font-bold text-lg mb-4 uppercase tracking-wider">Charger & Adapter</h3>
                         <ul className="flex flex-col gap-2 text-gray-600">
                             {data["Charger & Adapter"].map((item) => (
-                                <li key={item}><Link to="/categories" className="hover:text-[#02D5E0] transition-colors">{item}</Link></li>
+                                <li key={item}><Link to="/shop" className="hover:text-[#02D5E0] transition-colors">{item}</Link></li>
                             ))}
                         </ul>
                     </div>
@@ -30,7 +30,7 @@ const CategoryDropdown = ({ data, isOpen, onClose }) => {
                         <h3 className="font-bold text-lg mb-4 uppercase tracking-wider">Audio & Wearables</h3>
                         <ul className="flex flex-col gap-2 text-gray-600">
                             {data["Audio & Wearables"].map((item) => (
-                                <li key={item}><Link to="/categories" className="hover:text-[#02D5E0] transition-colors">{item}</Link></li>
+                                <li key={item}><Link to="/shop" className="hover:text-[#02D5E0] transition-colors">{item}</Link></li>
                             ))}
                         </ul>
                     </div>
@@ -42,7 +42,7 @@ const CategoryDropdown = ({ data, isOpen, onClose }) => {
                         <h3 className="font-bold text-lg mb-4 uppercase tracking-wider">Protection</h3>
                         <ul className="flex flex-col gap-2 text-gray-600">
                             {data["Protection"].map((item) => (
-                                <li key={item}><Link to="/categories" className="hover:text-[#02D5E0] transition-colors">{item}</Link></li>
+                                <li key={item}><Link to="/shop" className="hover:text-[#02D5E0] transition-colors">{item}</Link></li>
                             ))}
                         </ul>
                     </div>
@@ -50,7 +50,7 @@ const CategoryDropdown = ({ data, isOpen, onClose }) => {
                         <h3 className="font-bold text-lg mb-4 uppercase tracking-wider">Accessories</h3>
                         <ul className="flex flex-col gap-2 text-gray-600">
                             {data["Accessories"].map((item) => (
-                                <li key={item}><Link to="/categories" className="hover:text-[#02D5E0] transition-colors">{item}</Link></li>
+                                <li key={item}><Link to="/shop" className="hover:text-[#02D5E0] transition-colors">{item}</Link></li>
                             ))}
                         </ul>
                     </div>
@@ -61,7 +61,7 @@ const CategoryDropdown = ({ data, isOpen, onClose }) => {
                     <h3 className="font-bold text-lg mb-4 uppercase tracking-wider">Shop By Brands</h3>
                     <ul className="flex flex-col gap-2 text-gray-600">
                         {data["Shop By Brands"].map((item) => (
-                            <li key={item}><Link to="/categories" className="hover:text-[#02D5E0] transition-colors">{item}</Link></li>
+                            <li key={item}><Link to="/shop" className="hover:text-[#02D5E0] transition-colors">{item}</Link></li>
                         ))}
                     </ul>
                 </div>
@@ -84,7 +84,7 @@ const CategoryDropdown = ({ data, isOpen, onClose }) => {
                         alt="Smartwatch"
                         className="w-full object-contain cursor-pointer rounded-[30px]"
                     />
-                    <span className="text-center text-gray-400 font-medium">Shop Now</span>
+                    <span className="text-center text-gray-400 font-medium hover:text-cyan-500">Shop Now</span>
                 </div>
 
                 {/* <div className="absolute bottom-8 left-10 z-10">

@@ -10,7 +10,7 @@ const ShopProductCard = ({ title, subtitle, colors = [] }) => {
     };
 
     return (
-        <div className="bg-white rounded-3xl p-4 shadow-sm hover:shadow-md transition-shadow duration-300 w-full group">
+        <div className="bg-white rounded-3xl p-4 shadow hover:shadow-lg transition-shadow duration-300 w-full group">
             {/* Image Placeholder */}
             <div className="bg-gray-100 rounded-2xl w-full aspect-square mb-4 overflow-hidden relative">
                 <img
