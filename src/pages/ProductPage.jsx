@@ -3,6 +3,8 @@ import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer/Footer';
 import ShopHero from '../components/Shop/ShopHero';
 import ChooseDevice from '../components/Shop/ChooseDevice';
+import ShopSections from '../components/Shop/ShopSections';
+import AccessoryPromos from '../components/Shop/AccessoryPromos';
 import Categories from '../components/Categories/Categories';
 import Bestsellers from '../components/Bestsellers/Bestsellers';
 
@@ -13,10 +15,12 @@ const ProductPage = () => {
             <div className="mt-[100px]"> {/* Add margin to account for fixed navbar */}
                 <ShopHero />
                 <ChooseDevice />
+                <ShopSections />
+                <AccessoryPromos />
                 {/* <div className="py-10">
                     <Categories />
-                </div>
-                <Bestsellers /> */}
+                </div> */}
+                {/* <Bestsellers /> */}
             </div>
             <Footer />
         </div>
