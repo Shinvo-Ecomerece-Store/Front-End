@@ -5,6 +5,9 @@ import img2 from "../assets/productpage/product_details/2.png"
 import img3 from "../assets/productpage/product_details/3.png"
 import img4 from "../assets/productpage/product_details/4.png"
 import img5 from "../assets/productpage/product_details/5.png"
+import featureDark from "../assets/productpage/product_details/feature_dark.png"
+import featureLight from "../assets/productpage/product_details/feature_light.png"
+import { FaShieldAlt, FaShippingFast, FaCheckCircle } from "react-icons/fa";
 
 const ProductDetails = () => {
     // Mock Data based on the image provided
@@ -45,7 +48,8 @@ const ProductDetails = () => {
         <div className="bg-[#f8f9fa] min-h-screen pt-[120px] pb-20 lg:mt-10 font-sans text-gray-800">
             <div className="max-w-[1400px] mx-auto px-4 lg:px-8">
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 text-black items-stretch">
+                {/* Product Detail Top Section */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 text-black items-stretch mb-20">
                     {/* Left Column: Image Gallery */}
                     <div className="flex flex-col gap-2 lg:gap-6 h-full">
                         {/* Main Image */}
@@ -166,6 +170,88 @@ const ProductDetails = () => {
 
                     </div>
                 </div>
+
+                {/* Features Section Container */}
+                <div className="flex flex-col items-center w-full">
+
+                    {/* Tabs / Overview */}
+                    <div className="bg-gray-200 p-1 rounded-full inline-flex mb-8">
+                        <button className="px-6 py-2 bg-white rounded-full font-bold shadow-sm text-sm">Overview</button>
+                        <button className="px-6 py-2 text-gray-600 font-medium text-sm hover:text-black">Info</button>
+                        <button className="px-6 py-2 text-gray-600 font-medium text-sm hover:text-black">FAQ</button>
+                    </div>
+
+                    {/* Dark Section: Experience Super Fast Charging */}
+                    <div className="w-full bg-[#1c1c1c] text-white rounded-[40px] p-8 md:p-16 flex flex-col md:flex-row items-center justify-between overflow-hidden shadow-2xl relative mb-12 min-h-[500px]">
+                        {/* Image Left */}
+                        <div className="w-full md:w-1/2 flex justify-center z-10">
+                            <img src={featureDark} alt="Super Charging" className="max-w-[80%] md:max-w-[400px] object-contain drop-shadow-2xl" />
+                        </div>
+
+                        {/* Text Right */}
+                        <div className="w-full md:w-1/2 mt-8 md:mt-0 text-left z-10 pl-0 md:pl-12">
+                            <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">Experience Super <br /> Fast Charging 2.0</h2>
+                            <p className="text-gray-400 text-sm md:text-base leading-relaxed max-w-md">
+                                Unlock the full potential of your device with the Samsung 45W Travel Adapter.
+                                Designed specifically for the Galaxy S-Series, this adapter takes your battery
+                                from 0% to 65% in just 30 minutes. It uses advanced GaN (Gallium Nitride)
+                                technology to keep the charger compact and cool while delivering maximum power.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    {/* Light Section: Why Choose This Charger? */}
+                    <div className="w-full bg-white border border-gray-200 rounded-[40px] p-8 md:p-16 flex flex-col md:flex-row-reverse items-center justify-between shadow-lg mb-16 min-h-[500px]">
+                        {/* Image Right */}
+                        <div className="w-full md:w-1/2 flex justify-center items-center">
+                            <img src={featureLight} alt="Why Choose" className="max-w-[80%] md:max-w-[450px] object-contain" />
+                        </div>
+
+                        {/* Text Left */}
+                        <div className="w-full md:w-1/2 mt-8 md:mt-0 text-left">
+                            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-black">Why Choose This <br /> Charger?</h2>
+                            <div className="space-y-6">
+                                <div>
+                                    <h4 className="font-bold text-lg mb-1">Super Fast Charging 2.0:</h4>
+                                    <p className="text-gray-600 text-sm">Delivers the full 45W required for S24 Ultra and S23 Ultra.</p>
+                                </div>
+                                <div>
+                                    <h4 className="font-bold text-lg mb-1">Universal Support:</h4>
+                                    <p className="text-gray-600 text-sm">Supports PD (Power Delivery) & QC protocols, making it safe for other devices.</p>
+                                </div>
+                                <div>
+                                    <h4 className="font-bold text-lg mb-1">100% Official Product:</h4>
+                                    <p className="text-gray-600 text-sm">Comes in original Samsung retail packaging.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    {/* Bottom Info Cards */}
+                    <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-6">
+                        {/* Card 1 */}
+                        <div className="bg-[#1c1c1c] text-white rounded-[20px] p-8 flex flex-col items-center justify-center text-center gap-4 shadow-lg h-[200px]">
+                            <FaShieldAlt className="text-4xl text-white/90" />
+                            <h3 className="font-medium text-sm w-3/4">7 days Replacement Warranty</h3>
+                        </div>
+
+                        {/* Card 2 */}
+                        <div className="bg-[#1c1c1c] text-white rounded-[20px] p-8 flex flex-col items-center justify-center text-center gap-4 shadow-lg h-[200px]">
+                            <FaShippingFast className="text-4xl text-white/90" />
+                            <h3 className="font-medium text-sm w-3/4">Fast, Reliable Shipping</h3>
+                        </div>
+
+                        {/* Card 3 */}
+                        <div className="bg-[#1c1c1c] text-white rounded-[20px] p-8 flex flex-col items-center justify-center text-center gap-4 shadow-lg h-[200px]">
+                            <FaCheckCircle className="text-4xl text-white/90" />
+                            <h3 className="font-medium text-sm w-3/4">Genuine Products Guaranteed</h3>
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
         </div>
     );
