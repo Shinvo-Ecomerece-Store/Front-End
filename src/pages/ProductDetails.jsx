@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { FiMinus, FiPlus, FiShoppingCart, FiUser, FiChevronDown } from 'react-icons/fi';
+import { useCart } from '../context/CartContext';
 import img from "../assets/productpage/product_details/1.png"
 import img2 from "../assets/productpage/product_details/2.png"
 import img3 from "../assets/productpage/product_details/3.png"
@@ -11,8 +12,8 @@ import { FaShieldAlt, FaShippingFast, FaCheckCircle, FaPlus, FaTimes } from "rea
 import Footer from '../components/Footer/Footer';
 
 const ProductDetails = () => {
-    // Mock Data based on the image provided
     const product = {
+        id: 'samsung-45w-adapter',
         title: "Samsung 45W Travel Adapter (Super Fast Charging 2.0)",
         price: "Rs. 6,500",
         rating: 4.8,
@@ -130,6 +131,17 @@ const ProductDetails = () => {
     const [activeAccordion, setActiveAccordion] = useState(null); // 'info' | 'faq' | null
     const [activeTab, setActiveTab] = useState('overview');
     const [visibleReviews, setVisibleReviews] = useState(3);
+    const { addToCart } = useCart();
+
+    const handleAddToCart = () => {
+        addToCart({
+            id: product.id,
+            name: product.title,
+            price: 6500, // Numeric for calculation
+            image: product.images[0],
+            variant: `Color: ${selectedColor}, Power: ${selectedPower}`
+        });
+    };
 
     const handleShowMoreReviews = () => {
         setVisibleReviews(prev => prev + 3);
@@ -168,7 +180,7 @@ const ProductDetails = () => {
                     {/* Left Column: Image Gallery */}
                     <div className="flex flex-col gap-2 lg:gap-6 h-full">
                         {/* Main Image */}
-                        <div className="bg-gray-50 rounded-[20px] p-8 flex items-center justify-center relative overflow-hidden group flex-grow min-h-[500px]">
+                        <div className="bg-gray-50 rounded-[20px] p-8 flex items-center justify-center relative overflow-hidden group grow min-h-[500px]">
                             <img
                                 src={product.images[activeImage]}
                                 alt={product.title}
@@ -183,7 +195,7 @@ const ProductDetails = () => {
                                 <button
                                     key={index}
                                     onClick={() => setActiveImage(index)}
-                                    className={`w-[80px] h-[80px] rounded-[15px] border-2 flex-shrink-0 flex items-center justify-center p-2 bg-white transition-all
+                                    className={`w-[80px] h-[80px] rounded-[15px] border-2 shrink-0 flex items-center justify-center p-2 bg-white transition-all
                                         ${activeImage === index ? 'border-cyan-400' : 'border-gray-200 hover:border-gray-300'}
                                     `}
                                 >
@@ -275,10 +287,16 @@ const ProductDetails = () => {
 
                         {/* Actions */}
                         <div className="flex flex-col gap-3 mt-4">
-                            <button className="w-full bg-[#02D5E0] hover:bg-[#02b5be] text-black font-bold py-4 rounded-xl transition-all shadow-lg hover:shadow-cyan-400/30 text-lg">
+                            <button
+                                onClick={handleAddToCart}
+                                className="w-full bg-[#02D5E0] hover:bg-[#02b5be] text-black font-bold py-4 rounded-xl transition-all shadow-lg hover:shadow-cyan-400/30 text-lg"
+                            >
                                 Add to Cart
                             </button>
-                            <button className="w-full bg-black hover:bg-gray-900 text-white font-bold py-4 rounded-xl transition-all shadow-lg text-lg">
+                            <button
+                                onClick={handleAddToCart}
+                                className="w-full bg-black hover:bg-gray-900 text-white font-bold py-4 rounded-xl transition-all shadow-lg text-lg"
+                            >
                                 Buy it Now
                             </button>
                         </div>

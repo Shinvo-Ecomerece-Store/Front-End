@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useAuth } from '../../context/AuthContext';
+import { useCart } from '../../context/CartContext';
 import { FiSearch, FiUser, FiShoppingCart, FiMenu, FiX, FiChevronDown, FiChevronUp } from "react-icons/fi";
 import { Link } from 'react-router-dom';
 import UpperNavbar from './UpperNavbar';
@@ -8,6 +9,7 @@ import { categoryData } from './categoryData';
 
 function Navbar() {
   const { isLoggedIn } = useAuth();
+  const { cartCount, setIsCartOpen } = useCart();
   const [isOpen, setIsOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [mobileCategoryOpen, setMobileCategoryOpen] = useState(false);
@@ -42,7 +44,9 @@ function Navbar() {
             </div>
 
             {/* Mobile Icons */}
-            <FiShoppingCart className="text-2xl md:hidden" color='white' />
+            <button onClick={() => setIsCartOpen(true)} className="md:hidden">
+              <FiShoppingCart className="text-2xl" color='white' />
+            </button>
           </div>
 
           {/* CENTER: Navigation (Desktop) */}
@@ -72,9 +76,16 @@ function Navbar() {
                   <button className="text-white hover:text-[#53C1CC] transition-transform hover:scale-110">
                     <FiUser className="text-xl w-[32px] h-[32px]" />
                   </button>
-                  <button className="relative text-white hover:text-[#53C1CC] transition-transform hover:scale-110">
+                  <button
+                    onClick={() => setIsCartOpen(true)}
+                    className="relative text-white hover:text-[#53C1CC] transition-transform hover:scale-110"
+                  >
                     <FiShoppingCart className="text-xl w-[32px] h-[32px]" />
-                    <span className="absolute -top-1 -right-1 bg-[#53C1CC] text-white text-[9px] font-bold w-3 h-3 flex items-center justify-center rounded-full">2</span>
+                    {cartCount > 0 && (
+                      <span className="absolute -top-1 -right-1 bg-[#53C1CC] text-white text-[9px] font-bold w-3 h-3 flex items-center justify-center rounded-full">
+                        {cartCount}
+                      </span>
+                    )}
                   </button>
                 </>
               ) : (
@@ -157,8 +168,13 @@ function Navbar() {
                   <button className="text-white hover:text-[#53C1CC] transition-transform hover:scale-110">
                     <FiUser className="text-2xl" />
                   </button>
-                  <button className="relative text-white hover:text-[#53C1CC] transition-transform hover:scale-110">
-                    <span className="absolute -top-1 -right-2 bg-[#53C1CC] text-white text-[10px] font-bold w-4 h-4 flex items-center justify-center rounded-full">2</span>
+                  <button
+                    onClick={() => setIsCartOpen(true)}
+                    className="relative text-white hover:text-[#53C1CC] transition-transform hover:scale-110"
+                  >
+                    <span className="absolute -top-1 -right-2 bg-[#53C1CC] text-white text-[10px] font-bold w-4 h-4 flex items-center justify-center rounded-full">
+                      {cartCount}
+                    </span>
                     <FiShoppingCart className="text-2xl" />
                   </button>
                 </>

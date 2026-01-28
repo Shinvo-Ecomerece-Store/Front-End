@@ -8,6 +8,8 @@ import Register from './pages/Register';
 import NotFound from "./pages/NotFound";
 import ProductDetails from './pages/ProductDetails';
 import { AuthProvider } from './context/AuthContext';
+import { CartProvider } from './context/CartContext';
+import CartDrawer from './components/Cart/CartDrawer';
 
 
 function App() {
@@ -16,18 +18,21 @@ function App() {
 
   return (
     <AuthProvider>
-      <div className="font-outfit">
-        {!hideNavbar && <Navbar />}
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/shop" element={<ProductPage />} />
-          <Route path="/product/:id" element={<ProductDetails />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </div>
+      <CartProvider>
+        <div className="font-outfit">
+          {!hideNavbar && <Navbar />}
+          <CartDrawer />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/shop" element={<ProductPage />} />
+            <Route path="/product/:id" element={<ProductDetails />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </div>
+      </CartProvider>
     </AuthProvider>
   );
 }
