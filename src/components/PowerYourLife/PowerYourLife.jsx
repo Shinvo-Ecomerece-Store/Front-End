@@ -29,7 +29,7 @@ const PowerYourLife = () => {
                     <button className="btn-primary text-black px-8 py-3 rounded-full font-bold flex items-center gap-2 active:bg-white active:text-cyan-500 transition-colors shadow-md">
                         Shop Power Banks
                         <div className="bg-white rounded-full p-1 ml-1 w-6 h-6 flex items-center justify-center">
-                            <FaArrowRight className="text-xs text-black" />
+                            <FaArrowRight className="text-xs text-black -rotate-45" />
                         </div>
                     </button>
                 </div>
